@@ -1,0 +1,155 @@
+\documentclass[letterpaper,12pt,twoside=false,DIV=11]{scrbook}
+
+%----------------------CONFIG---------------------------
+%math packages
+\usepackage{amsmath,amssymb,amsthm,units,unitsdef}
+
+%bibliography style and citation style, bibstyles to use: plainnat, abbrvnat, unsrtnat, named, chicago
+%otherwise numerical citationstyle will be used
+\usepackage[authoryear,round]{natbib}
+
+\usepackage{longtable,tabularx,tabulary,multirow,lscape}
+\usepackage[font={sl},format=plain,labelfont=bf]{caption}
+
+% colors
+\usepackage{color,colortbl}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{darkblue}{HTML}{00354C}
+
+\usepackage{booktabs}
+%\usepackage{showkeys} % shows the labels above the references for
+
+%easier development
+\usepackage{ifpdf}
+
+\ifpdf
+	\usepackage[pdftex]{graphicx}
+	\usepackage[]{pdfpages} %for including full pdf pages
+	\usepackage[pdftex,
+		bookmarks,
+		bookmarksopen=true,
+		bookmarksnumbered=true,
+		pdfauthor={Reto Trappitsch},
+		pdftitle={On the origin of elements in the Milky Way},
+		colorlinks,
+		linkcolor=darkblue,
+		citecolor=darkblue,
+		filecolor=black,
+		urlcolor=darkblue,
+		anchorcolor=black,
+		menucolor=black,
+		breaklinks=true,
+		pageanchor=true, %for jumping to a page
+		plainpages=false,
+		pdfpagelabels=true]{hyperref}
+	\pdfcompresslevel=9
+	\pdfoutput=1
+	\DeclareGraphicsExtensions{.pdf,.png,.jpg,.jpeg}
+\else
+	\usepackage{graphicx}
+\fi
+\usepackage{rotating} % rotate figures
+\usepackage{subcaption}
+\usepackage{wrapfig}
+
+%page style
+%==========
+%\usepackage{geometry}
+%\geometry{top=1.0in, bottom=1.0in, left=1.0in, right=1.0in,footskip = 0.5in} 
+
+% Alert boxes
+\usepackage{awesomebox}
+
+% Acronyms
+\usepackage{acro}
+\acsetup{
+	make-links = true
+}
+\include{acronyms}
+
+% newcommands
+%============
+% my short cuts
+\providecommand{\e}[1]{\ensuremath{\times 10^{#1}}}
+\providecommand{\ex}[1]{\ensuremath{^{#1}}}
+\providecommand{\dex}[1]{\ensuremath{\delta^{#1}}}
+\newcommand{\nean}{$^{22}$Ne($\alpha$,n)$^{25}$Mg}
+
+% textnormal
+\newcommand{\tn}{\textnormal}
+% textregistered
+\newcommand{\tr}{$^\tn{\textregistered}$}
+
+% more box stuff
+\makeatletter
+\providecommand{\boxtitle}[1]{\sffamily{\textbf{#1}}\normalfont}
+	
+\providecommand{\infobox}[2]{\awesomebox[MidnightBlue]{2pt}{\faPaw}{MidnightBlue}{\boxtitle{#1} #2}}
+\providecommand{\morebox}[2]{\awesomebox[BrickRed]{2pt}{\faRocket}{BrickRed}{\boxtitle{#1} #2}}
+\providecommand{\codebox}[2]{\awesomebox[OliveGreen]{2pt}{\faCode}{OliveGreen}{\boxtitle{#1} #2}}
+
+
+
+%=========================================================================================================
+%title specifications
+
+\title{On the Origin of Elements in the Milky Way}
+\author{Reto Trappitsch}
+\date{Spring semester 2021}
+
+
+
+
+%-------------------DOCUMENT---------------------------
+
+\usepackage{blindtext}
+\begin{document}
+
+\maketitle
+
+% TOC
+\pagenumbering{roman}
+\setcounter{page}{1}
+\tableofcontents
+
+\clearpage
+
+
+% MAIN TEXT
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\chapter*{Preface}\label{sec:preface}
+\addcontentsline{toc}{chapter}{Preface}
+
+These lecture notes for the course ``On the origin of the elements in the Milky Way'' are prepared as we go, so they will be in part influenced by you! If you find typos, errors, or other issues please let me know. The most recent copy of the \LaTeX\ files and figures can also be found on \href{https://github.com/galactic-forensics/lecutre_origin_elements/}{GitHub}.
+
+The lecture notes contain clickable links, e.g., all references are linked to the bibliography and all acronyms are linked to the acronyms' definition page. These links are generally colored in \textcolor{darkblue}{dark blue}.
+
+The end of the document contains a bibliography that contains details on all references. Note that references here are limited and often point to review articles that could be of interest to the reader. More detailed references to individual topics can be found in these articles. Each reference entry contains a \acf{doi}\footnote{\url{https://doi.org}} that can be found online and accessed via a Brandeis library subscription. Alternatively, a link to ArXiV\footnote{\url{https://arxiv.org}} is provided.
+
+Specific boxes throughout the text discuss further information. They are defined as following:
+
+\infobox{Background information}{on topics that do not necessarily fit into the text but are important to keep in mind will be given in a box like this.}
+
+\morebox{Further information and reading}{for the avid reader will be pointed out in a box like this. The scope of these boxes is generally slightly outside the realm of the class.}
+
+\codebox{Programming}{is an integral part of scientific research, be it for running experiments, performing measurements, evaluating measurements, or modeling a system. A box like this will point you to more information with respect to coding. These boxes will often refer to coding in \href{https://www.python.org}{python}.}
+
+\printacronyms
+
+
+% Chapters
+
+\include{solar_system_abundances}
+% \include{big_bang_nucleosynthesis}
+
+
+% Bibliography
+
+\phantomsection
+\addcontentsline{toc}{chapter}{Bibliography} \label{sec:bibliography}
+\bibliographystyle{aasjournal}
+\bibliography{origin_elements}
+
+\end{document}

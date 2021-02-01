@@ -1,0 +1,244 @@
+%!TEX root = origin_elements_lecture_notes.tex
+
+\chapter{Solar System Abundances}
+
+To understand the origin of the elements in the Milky Way, it is crucial to first understand what in fact needs explaining. One of the best studied points in the history of the Milky Way is the Solar System we inhabit, mainly since we actually live inside it and thus have direct access to its material.
+
+The Solar System formed 4.567\,Ga ago from a homogeneous molecular cloud. Since the Milky Way itself formed roughly 13\,Ga ago, the molecular cloud from which the solar nebula formed evolved for roughly 8.4\,Ga since the formation of the Milky Way and around 9\,Ga since the Big Bang. The process that describes the formation and destruction of elements over this period of time is generally referred to as \ac{gce}. 
+
+\begin{figure}[bt]
+    \begin{subfigure}{0.5\textwidth}
+        \includegraphics[width=\textwidth]{graphics/solar_system_abundances/milky_way_profile_wiki}
+    \end{subfigure}
+    \begin{subfigure}{0.5\textwidth}
+        \includegraphics[width=\textwidth]{graphics/solar_system_abundances/UGC_12158}
+    \end{subfigure}
+    \caption{Left: Profile of the Milky Way with the current position of the Solar System indicated. Edited from \href{https://en.wikipedia.org/wiki/Milky_Way}{Wikipedia}. Right: Galaxy UGC 12158, which is thought to have a similar spiral structure as the Milky Way. Credit: ESA/Hubble \& NASA}
+    \label{fig:milky_way_profile_wiki}
+\end{figure}
+In order to put the Solar System abundances in perspective to the galaxy, Figure~\ref{fig:milky_way_profile_wiki} shows a schematic of the Milky Way (left). The galactic center, which is likely a black hole, is surrounded by an area called the bulge. The disk of the Milky Way has a spiral structure. An analogue galaxy with a similar structure is UGC 12158, shown on the right in Figure~\ref{fig:milky_way_profile_wiki}. The densest regions of the Milky Way are close to the center (e.g., the bulge) while less dense areas are further out (e.g., the disk). The Solar System is located in the disk and about two-thirds out from the center in one of the spiral arms called the Orion-Cygnus arm. Disk and bulge are both surrounded by a low-density halo. This halo also contains globular clusters, which are gravitationally bound aggregations of stars. These clusters tend to be very old and are thus made of material that formed early on in the history of the Milky Way.
+
+This chapter discusses the composition of the Solar System 4.567\,Ga ago (the initial Solar System abundances) and today (abundances in the solar photosphere). While we can observe stars and determine their composition via spectroscopy, the Solar System is unique since we have meteorites available that represent unaltered solar nebula material. This material is especially useful since it can be studied in the laboratory using mass spectrometry techniques. 
+
+\codebox{Initial Solar System abundances in python}{can easily be handled with the \href{https://github.com/galactic-forensics/iniabu}{\texttt{iniabu}} package. This package can be used make various databases of Solar System abundances available for interaction and is used here to create abundance plots using \href{https://www.matplotlib.org}{\texttt{matplotlib}}. Full disclosure: I am the author of the package and am thus surely biased.}
+
+
+\section{Definitions and Notations}
+
+\subsection{Terminology}
+
+\textbf{Elemental concentrations and abundances} are two terms that are often used interchangeably and their meaning, unfortunately, is often ambiguous. Let us for example look at a form of uranium oxide named \href{https://en.wikipedia.org/wiki/Yellowcake}{yellowcake}. The chemical formula for a common form of yellowcake is U$_3$O$_8$, i.e., the smallest unit consists of three uranium atoms and eight oxygen atoms. Expressing the stoichiometric elemental abundance of oxygen in yellowcake, i.e., the abundance by number of atoms, we would say that the oxygen abundance of yellowcake is $8 / (8+3) = 0.73$. Alternatively and often (but not exclusively referred to as the concentration) we could determine the oxygen concentration by mass. Uranium (mean mass: $\bar{m}_{\tn{U}} = 237.3$\,u) is significantly heavier than oxygen (mean mass: $\bar{m}_{\tn{O}} = 16.0$\,u). The mean mass here is the mass averaged over all isotopes of the specific element. The average concentration of oxygen in yellowcake, by mass, can then be determined as:
+\begin{equation}
+    [{\tn{O}}] = \frac{8 \bar{m}_{\tn{O}}}{8 \bar{m}_{\tn{O}} + 3 \bar{m}_{\tn{O}}} = 0.15
+\end{equation}
+Note that when solar abundances with respect to meteorites, the stoichiometric / number abundances are generally used. Astronomers and astrophysicists on the other hand often report mass fractions (see below).
+
+\textbf{Solar (elemental) mass fractions} are commonly used in astronomy. For astronomers, the universe consists, to first order, of three elements, namely hydrogen ($X$), helium ($Y$), and metals ($Z$), which are all elements heavier than helium. This might sound strange since it implies that the air we breathe (78\% nitrogen, 21\% oxygen) consists of metals in the astronomical sense, however makes some sense when looking, e.g., at the composition of the Sun. The Sun's composition in this notation is $X=0.7389$, $Y=0.2463$, and $Z=0.0148$. These mass fractions are always given by weight.
+
+\textbf{Solar System initial abundances}, often referred to as Solar System abundances, describe the original composition of the Solar System 4.567\,Ga ago. To determine this composition, measurements of, e.g., meteorites must be decay corrected for radioactive nuclides and their products.
+
+\textbf{Solar photospheric abundances} on the other hand refer to the present-day composition of the Sun. There are further important differences between initial and present-day abundances that are discussed in the subsequent sections.
+
+\infobox{Radioactive decay}{Unstable atomic nuclei undergo radioactive decay to so-called daughter nuclei. For example, \ex{26}Al is an unstable isotope and decays to the stable \ex{26}Mg. Its half-life ($t_{1/2}$), which is the time after which only half the initial material is left, is $7.17\times10^{5}$\,a. Radioactive decay is an exponential process. Instead of the half-life the decay constant $\lambda = \ln{2} / t_{1/2}$ is often referred to. Radioactive decay can be calculated as:
+\begin{equation}
+    N(t) = N_0 \exp{(-\lambda t)} \label{eqn:radioactive_decay}
+\end{equation}
+Here, $N_0$ is the amount of radioactive material available at $t=0$ and $N(t)$ is the amount of material after time $t$ has elapsed.}
+
+\subsection{Scales}
+
+As with definitions, several different scales are used. Here we define the three most commonly used ones. \textbf{Meteoritic abundances} are generally normalized to the number of silicon atoms, which is set to be equal to $N_\tn{Si} = 10^{6}$. These abundances scale linearly.
+
+\textbf{Spectroscopic abundances}, often used in astronomy, are frequently given with respect to hydrogen, the most abundant element in the universe. These abundances are usually reported as logarithmic abundances and the abundance of hydrogen is defined to be equal to 12. For example, the Solar System initial abundance of silicon in this logarithmic unit can be calculated as:
+\begin{equation}
+    A(\tn{Si}) = \log_{10} \left( \frac{N_\tn{Si}}{N_\tn{H}}\right) + 12 = 7.59
+\end{equation}
+Here, $N_\tn{Si}$ and $N_\tn{H}$ are the number abundances of silicon and hydrogen, respectively.
+
+Finally, \textbf{mass fractions} are also frequently used in astronomy and astrophysics. The mass fraction of an element or isotope $x_i$ with number abundance $N_i$ and mass $m_i$ can be calculated as:
+\begin{equation}
+    x_i = \frac{N_i m_i}{\sum_j N_j m_j}
+\end{equation}
+Here, the sum over $j$ adds up all elements or isotopes. If we were thus to sum up all mass fractions, we would get $\sum_j x_j = 1$.
+
+
+\subsection{Comparing measurements}
+
+
+In astronomy, chemical abundance ratios are generally expressed in ``bracket''-notation. These chemical abundance ratios are then usually regarded with respect to a standard, which generally is the Sun. For example, to express the iron content of a given star in comparison to the Sun one would calculate:
+\begin{equation}
+    [\tn{Fe}/\tn{H}] = \log_{10} \left( \frac{N_\tn{Fe}}{N_\tn{H}}\right)_\tn{star} - \log_{10} \left( \frac{N_\tn{Fe}}{N_\tn{H}}\right)_\odot
+\end{equation}
+Here, $N_x$ represents the number abundance of a given element $x$. The symbol $\odot$ is generally used for the Sun. Using this formulation, observations with higher iron content than the Sun would result in a positive number, and vice verse. While the [Fe/H] number is unitless, differences in this notation are commonly referred to as \ac{dex}. A star with a $0.3$\,dex enhancement in [Fe/H] would thus have twice as much iron than the Sun when normalized to hydrogen.
+
+
+
+
+\section{The Sun}
+
+The Sun is the central body of the Solar System and contains with a mass of $\sim2\times10^{30}$\,kg about 99.86\% of the total mass in the Solar System. The total luminosity of the Sun is $3.8\times10^{26}$\,W and it's orbited by the Earth at a mean distance of $\sim1.5\times10^{8}$\,km, which is equal to 1 \ac{au}. The total solar irradiance at Earth is thus around 1.3\,kW/m$^{2}$.
+
+\begin{figure}[tb]
+    \centering
+    \includegraphics[width=0.8\textwidth]{graphics/solar_system_abundances/sun_structure}
+    \caption{The structure of the Sun. Credit: \href{https://en.wikipedia.org/wiki/Sun}{Wikipedia}}
+    \label{fig:Sun_structure}
+\end{figure}
+Since the Sun contains the majority of the Solar System's mass, it is reasonable to assume that this celestial body also represents well the Solar System's composition. Figure~\ref{fig:Sun_structure} shows an artistic rendering of the structure of the Sun. The Sun's core extends to about a quarter of its radius and is the main nuclear engine that fuses hydrogen to helium at a temperature of around $16\times10^{9}$\,K.\footnote{Temperatures in astrophysics are often written as $T_x = y$. In this case, the actual temperature would be $y\times10^{x}$\,K. For the core of the Sun we could write the temperature thus as $T_{10} = 1.6$.} The solar core is not convectively connected to the outer layers, thus energy is mainly transported by radiative transfer. The photosphere, which is the visible part of the Sun, is at a temperature of around $5800$\,K. The atmosphere of the Sun has a minimum temperature of around 4100\,K about 500\,km above the photosphere. It consists of the chromosphere which lays above the photosphere and the solar corona that extends from the chromosphere out into space. At higher altitudes the temperature of the corona increases and reaches temperatures in excess of $10^6$\,K. How such high temperatures can be reached in the solar corona is still unclear.
+
+\morebox{Wien's displacement law}{states that the radiation curve of a black-body has it's peak at different wavelengths depending on the temperature. For a given temperature, the peak wavelength can be calculated as:
+\begin{equation}
+    \lambda_\tn{max} = \frac{b}{T}
+\end{equation}
+Here, $T$ is the temperature in kelvin and $b = 2.898 \times 10^{-3}$ m$\cdot$K. Plugging in the photosphere temperature, we can calculate a peak wavelength at 500\,nm, which is the color green in the visible part of the electromagnetic spectrum.}
+
+
+\subsection{Spectroscopy and Absorption Spectra}
+
+\begin{figure}[tb]
+    \centering
+    \includegraphics[width=0.8\textwidth]{graphics/solar_system_abundances/fraunhofer_lines_800px}
+    \caption{The solar spectrum broken up into its components. Credit: \href{https://en.wikipedia.org/wiki/Fraunhofer_lines}{Wikipedia}}
+    \label{fig:fraunhofer_lines}
+\end{figure}
+In order to determine the composition of the Sun from the electromagnetic spectrum it radiates, astronomers use a technique called stellar spectroscopy. Using a prism or grating the light from the Sun is dispersed into its individual colors. Figure~\ref{fig:fraunhofer_lines} shows the electromagnetic spectrum of the Sun between 380\,nm and 710\,nm. Clearly visible are dark spectral absorption lines, so-called Fraunhofer lines named after Joseph von Fraunhofer who discovered, studied, and described them in 1814.
+
+These absorption lines are fingerprints of the Sun's elemental composition. The dark lines form since photons coming out of the Sun are absorbed in the photosphere by atoms. The absorbed photons are subsequently re-emitted, however, this re-emission is not directed. Thus, the area of the spectrum that the original photon was absorbed in appears darker. For example, the double lines labeled ``D'' in Figure~\ref{fig:fraunhofer_lines} are a feature of the sodium absorption lines.
+
+
+\subsection{Stellar Abundances} \label{sec:solar_abundances:sun:stellar_abundances}
+
+In order to interpret the Fraunhofer lines observed from the Sun with respect to its elemental composition, many physical parameters and models must be known. Here we give a brief overview of these modeling efforts. Further details can be found in two great reviews on determining the Sun's elemental composition by \citet{asplund09} and \citet{allende-prieto16}.
+
+To determine the composition of the Sun two closely related conditions must be understood: (1) line formation and (2) the stellar atmosphere. These two fields include physics from several disciplines, namely fluid dynamics, statistical mechanics, and thermodynamics. To understand line formation the atomic parameters and stellar conditions, such as the opacity, need to be known. To model stellar atmospheres on the other hand we need to know the energy radiated through the atmosphere, the surface gravity, and the chemical composition. Note that the chemical composition is on one hand what we would like to determine from these observations, however it is also an integral part of the stellar atmospheric model. The chemical composition has thus to be determined in an iterative process. For a given set of interest, especially the amount of energy radiated through it, its surface gravity, and its chemical composition. Note that the chemical composition, which is what we would like to find, must be known in order to model the stellar atmosphere. Determining the composition of the Sun from observations is thus an iterative process. For a given model atmosphere and determined atomic and molecular lines and continuum opacities, so-called spectra synthesis codes can be used to predict the spectrum of the model star with all its absorption lines. These spectra are then compared to observations. If different, the parameters, especially the chemical composition is updated with better values and the models are run again. The chemical composition of the star is found when model and observations agree.
+
+
+
+
+\subsubsection{Photospheric Abundances}
+
+The solar photosphere (see Figure~\ref{fig:Sun_structure}) is the part of the Sun that we can actually see. Spectroscopy of the photosphere is thus generally used to model the solar abundances. With a temperature between 4500\,K and 6000\,K and an effective temperature of around 5800\,K no molecules can form in the photosphere and thus only atoms are expected to contribute to its absorption lines. Furthermore, the densities of the chromosphere and corona above the photosphere are so low that they do not influence the absorption lines observed from the photosphere.
+
+The present-day solar photosphere composition is slightly different from the initial Solar System abundance, i.e., the abundance that is representative of the homogeneous solar nebula. One difference of course is for radioactive nuclides that have decayed over the last 4.567\,Ga since the beginning of the Solar System. Furthermore, thermal diffusion, gravitational settling, and radiative acceleration -- the three of which are often collectively referred to as diffusion -- also changed the photospheric composition over the past 4.567\,Ga. Corrections for these effects must thus be applied before comparing Solar System initial abundances, as e.g., measured in meteorites (see Section~\ref{sec:sol_abu_meteorites}) with photospheric measurements.
+
+\subsubsection{Chromosphere \& Corona Observations}
+
+The chromosphere and corona are the solar layers right above the photosphere. These layers are too thin for us to directly observe and can generally only be seen during a total solar eclipse. Since there is no homogeneous background irradiation for the chromosphere and corona in these cases, absorption spectra cannot be measured. Thus, the elemental composition of the solar atmosphere is determined by measuring emission spectra. Excited atoms fall back to their ground states at discreet energies. Such emission lines will show up as bright instead of dark lines when analyzed in a spectrograph. 
+
+Temperatures as low as 4100K have been measured in the chromosphere. This allows for the existence of simple molecules, which complicates the determination of the spectral abundances since many more atomic transitions are suddenly available. Furthermore, the chromosphere has a fairly large temperature gradient which also complicates the models. 
+
+Coronal abundances are difficult to determine. The extremely high temperatures of the coronal make it difficult to determine radiative transitions in the laboratory. A large part of the coronal emission lines are furthermore in the \ac{uv} and \ac{euv}, thus can not be detected from Earth due to the atmosphere. Spacecrafts such as \ac{soho} have been used to determine the elemental composition of the solar corona.
+
+
+
+\subsubsection{Solar Wind \label{sec:solar_abus:solar_wind}}
+
+\begin{figure}[bt]
+    \begin{subfigure}{0.470209674\textwidth}
+        \includegraphics[width=\textwidth]{graphics/solar_system_abundances/apollo11_aldrin_solar_sail}
+        \caption{Buzz Aldrin standing next to the solar sail during the Apollo 11 mission.}
+        \label{fig:solar_wind_catcher_experiments:solar_sail}
+    \end{subfigure}
+    \begin{subfigure}{0.529790326\textwidth}
+        \includegraphics[width=\textwidth]{graphics/solar_system_abundances/genesis_spacecraft}
+        \caption{Artist conception of the Genesis spacecraft with unfolded collectors.}
+        \label{fig:solar_wind_catcher_experiments:genesis}
+    \end{subfigure}
+    \caption{The two types of solar wind catcher experiments that have been used to determine the composition of the Sun. Credit: NASA}
+    \label{fig:solar_wind_catcher_experiments}
+\end{figure}
+
+Mass ejections such as prominences and flares (see Figure~\ref{fig:Sun_structure}) are the origin of the solar wind that penetrates the whole Solar System. The interaction of the solar wind with the Earth's magnetic field can, e.g., be seen as aurorae (borealis and australis), also known as the northern and southern lights. The solar wind consists to 98\% of protons (charged hydrogen particles). The other 2\% is mainly charged helium nuclei and a minute amount of heavier particles. This however means that the solar wind does carry some part of the Sun's composition out through the solar system.
+
+While the solar wind cannot be measured on Earth, bodies without an atmosphere such as the Moon are constantly struck by solar wind. During the Apollo missions to the Moon, astronauts carried a solar sail, which was aluminum foil mounted on a pole in order to capture solar wind during their stay on the Moon. Figure~\ref{fig:solar_wind_catcher_experiments:solar_sail} shows Apollo 11 astronaut Buzz Aldrin standing next to the solar sail. While valuable measurements were done using solar sails flown on Apollo missions, the total exposure time of the aluminum foil was very limited, i.e., only up to a few days each. Thus, only little material was captured which resulted in significant analytical uncertainties when measuring the captured content.
+
+In 2001, NASA launched the Genesis spacecraft which was parked on a Lagrange point L$_1$.\footnote{For more information, see \url{https://en.wikipedia.org/wiki/Lagrangian_point}} L$_1$ is a gravitationally semi-stable place in space in between the Sun and the Earth. Genesis exposed its collectors (Figure~\ref{fig:solar_wind_catcher_experiments:genesis}) to the solar wind for a total of 850\,d before returning to Earth. In order to avoid any contamination with terrestrial material, NASA's plan was for Genesis to re-enter the Earth's atmosphere, deploy its drogue parachute, and then capture the capsule mid-air using a helicopter with a long hook. The deployment mechanism for the parachute was connected to an accelerometer, which was unfortunately built backwards into the spacecraft. This resulted in the accelerometer measuring the acceleration with the wrong sign, thus never triggering the software to release the parachute. Needless to say that the ``landing'' of Genesis took place at a terminal velocity of around 86\,m\,s$^{-1}$ (190\,mph). This broke open the collector container and all collectors were significantly contaminated with material from the Utah dessert. Nevertheless, all main objectives of Genesis could still be achieved by meticulously cleaning and puzzling the collector array back together, a process that took several years.
+
+
+\section{Meteorites}\label{sec:sol_abu_meteorites}
+
+Meteorites are rocks that originated in the Solar System and fell to Earth as meteors. They are either finds, meaning that they were found during searches, or falls, meaning that they were found after observing the meteor in the sky. Meteorites could have previously been part of another planet, e.g., Mars, part of the Moon, or, most often, part of an asteroid. Thousands of these rocks have been analyzed, and they are generally classified into various different groups. The two major groups these rocks belong to relate them to their origin; they were either part of a differentiated or an undifferentiated parent body. A differentiated Solar System body has at some point in its history gotten hot enough in order to be completely or partially molten. This separated the metal-loving (siderophile) from the silicate loving (lithophile) elements. The Earth for example is a differentiated body with an iron, nickel core at the center and a silicate mantel around it. Meteorites from undifferentiated bodies, called chondrites, still contain the metal and silicate in the same phases, i.e., they have never gotten hot enough to differentiate. 
+
+In order to determine the initial Solar System composition by analyzing meteorites, samples that have never been altered throughout its history are of special interest. These meteorites are called primitive. The most primitive subgroup of the chondrites are the carbonaceous chondrites, which have generally not even been heated enough in order to destroy the mineral phases that originally condensed from the solar nebula.
+
+Alterations different from heat, e.g., chemical alterations, can also influence the composition and thus primitiveness of a meteorite. Meteorites that have been the least altered with respect to their chemical and isotopic composition are carbonaceous chondrites that are similar to the Ivuna meteorite, which is the type specimen for this group. The name of this chondrite group is thus abbreviated CI chondrites. The Orgueil meteorite, a CI chondrite, represents the best studied sample for the Solar System initial abundance. This rock fell on May 14, 1864 just after 8pm local time near Orgueil, a town in southern France. Samples were recovered immediately, totaling 14\,kg of material. Meteorite falls have the advantage that they did not spend any significant amounts of time exposed to the weather on Earth, thus they do not show any terrestrial alteration either. 
+
+To determine the composition of meteorites, their material is usually homogenized and then analyzed using a mass spectrometery. Depending on the element of interest sample material is atomized and ionized. These ions are then separated by mass-over-charge in a mass analyzer. This allows for precise determination of their elemental and isotopic composition.
+
+\morebox{Stardust}{Some primitive meteorites contain micrometer sized grains that in fact did not form in the Solar System at all but rather represent bona-fide stardust grains. These stardust grains formed in the outflow of dying stars, were transported through the \ac{ism}, and then incorportated into meteorite parent bodies during their formation. We will discuss stardust grains in more detail later since these samples allow us to directly probe the processes in which elements are created.}
+
+
+
+\section{The Composition of the Solar System}
+
+While CI chondrites seem to be primitive Solar System objects, their total mass is represents only a tiny fraction of the total mass of the Solar System. Photosphere observations on the other hand are associated with larger measurement uncertainties and require modeling of the physical processes underlying the formation of absorption spectra. The question thus arises on how the composition of the Solar System can best be determined.
+
+\subsection{Comparing CI chondrites and the Photosphere}
+
+\begin{figure}[bt] \centering
+    \includegraphics[width=0.5\textwidth]{graphics/solar_system_abundances/solar_photosphere_ci_abundances_correlation}
+    \caption{Comparison of solar photosphere measurements \citep{asplund09} and the composition of CI meteorites \citep{lodders20}. Elements that do not lie close to the 1:1 correlation line are labeled.}
+    \label{fig:solar_photosphere_ci_comparison}
+\end{figure}
+Figure~\ref{fig:solar_photosphere_ci_comparison} shows the comparison of the photosphere measurements reported in \citet{asplund09} with the CI chondrite measurements reported in \citet{lodders20}. Most elements lie perfectly on the 1:1 correlation indicated in black in the figure, which spans a total of around 12 orders of magnitude. However, there are some very notable deviations that require further discussion.
+
+\paragraph{Lithium} is the only element that is more abundant in CI chondrites than in the Sun. In the Sun, lithium diffuses effectively. Since it is destroyed during the nuclear reactions taking place in the stellar core, the overall abundance of lithium is expected to be depleted when compared to the bulk Solar System.
+
+\paragraph{The noble gases} helium, neon, argon, krypton, and xenon are all very volatile and are thus heavily depleted in meteorites, i.e., they never effectively condensed into the rocky material when meteorite parent bodies formed. The bulk Solar System helium abundance can fortunately be derived from helioseismology via observations of the Sun and is not highly model dependent. Various techniques have been used to determine the composition of the other noble gases. One of the most accurate methods to-date is the analysis of solar wind in the Genesis collectors, see page~\pageref{sec:solar_abus:solar_wind}.
+
+\paragraph{Hydrogen} is also a highly volatile element and thus does not effectively condense into meteorite parent bodies. Hydrogen thus needs to be measured in the Sun by model comparison. The hydrogen mass is insensitive to the Z/X composition of the Sun, which results in an accurate determination of the hydrogen mass fraction X.
+
+\paragraph{Carbon, nitrogen, and oxygen} are prominent atoms that form volatile molecules, e.g., CO, CO$_2$, N$_2$, and O$_2$. Thus, these elements are expected to be depleted in rocky materials. While these elements can all be measured in the solar photosphere, model improvements resulted in significant changes over time in their abundances.
+
+\subsection{Solar System Elemental Abundances}
+
+\begin{figure}[bt] \centering
+    \includegraphics[width=\textwidth]{graphics/solar_system_abundances/solar_system_abundances}
+    \caption{Solar System initial abundances for all elements \citep{lodders09}.}
+    \label{fig:solar_system_abundances}
+\end{figure}
+Figure~\ref{fig:solar_system_abundances} shows the elemental abundances of the solar nebula. Clearly, hydrogen and helium are the most abundant elements. Furthermore, we can see a clear peak around carbon, oxygen, and neon. These elements are made in most stars and thus reach such high abundances. There is also a clear peak at the iron isotopic composition. This is due to the fact that in this region, the binding energy per nucleon is the highest across all elements. That means that energy can be gained by fusing nuclides together up to iron. Past iron this does not happen anymore, thus the abundances of all heavier nuclides drop significantly.
+
+Another striking feature of the abundance curve in Figure~\ref{fig:solar_system_abundances} is the clear zigzag pattern. This pattern is due to the fact that even nuclei, i.e., nuclei with an even number of nucleons (protons and neutrons), have a higher binding energy than odd nuclei and are thus more stable. 
+
+
+\subsection{Solar System Isotopic Abundances}
+
+So far we have mostly discussed the abundance of the elements in the Solar System. Just as important is the abundance of the isotopes, which can be derived from CI chondrites with high precision. Atomic line differences of individual isotopes are generally too small in order to derive useful isotopic abundances from solar observations. Let us briefly discuss the origin of a few important isotopes cannot easily be derived from CI chondrites.
+
+\paragraph{Deuterium and \ex{3}He} are both highly volatile, thus cannot be measured in CI chondrites, and have been significantly changed in the Sun. In its early stage the Sun underwent deuterium burning, essentially leaving it deuterium free at this point. This burning also produced \ex{3}He and thus changed its abundance in the Sun. The exact D/H ratio in the Solar System is still an active matter of research. Good analogues to determine this ratio are the atmosphere of Jupiter which consists mainly of the gaseous material that the solar nebula was made of, and in comets. Certain, so-called Kuiper-belt comets formed far out in the Solar System beyond the snow-line, which is the area of the solar nebula beyond which water only appears in solid form. These comets thus trapped the original D/H composition. For the early Solar System \ex{3}He/\ex{4}He ratio, the value for Jupiter's atmosphere is generally adopted.
+
+\paragraph{Carbon, nitrogen, and oxygen} are all very volatile. While the carbon isotopic composition in the Solar System is not very variable across different types of meteorites, the nitrogen and oxygen isotopic composition vary widely. To measure these isotopes in solar wind was one of the main objectives of the Genesis mission. After significant cleaning of these collectors, the solar oxygen and nitrogen isotopic composition have finally been determined by \citet{mckeegan11} and \citet{marty11}, respectively.
+
+\paragraph{Noble gases} are also volatile. As discussed before, their elemental and isotopic abundances were determined using the solar wind collectors on board the Genesis spacecraft. A detailed review of this work can be found in \citet{heber09}.
+
+
+
+\subsection{Preview on the Origin of Elements and Isotopes}
+
+So far we have only briefly discussed the major features visible in the Solar System abundance pattern (Figure~\ref{fig:solar_system_abundances}). We will look into a lot more details on how individual elements and groups formed later on. The production of elements and their isotopes takes place in a process called nucleosynthesis. A brief overview of these processes is given below.
+
+All hdrogen and helium in universe formed right after the Big Bang in a process called \acl{bbn}. The majority of all heavier elements were subsequently formed in stars. Elements up to the iron peak formed mainly in massive stars by nuclear fusion reactions. As discussed before, the binding energy per nucleon is the highest at iron and thus fusion reactions beyond this region are not energetically favorable. Thus, other processes must take over. 
+
+Most isotopes beyond iron are formed by neutron-capture reactions. Since neutrons are not electrically charged, they do not see the Coulomb barrier of a positively charged nucleus and can thus be more effectively added to it. Neutron addition takes place until the nucleus becomes unstable. Unstable, neutron-rich nuclei decay generally via $\beta^{-}$-decay to the next stable isobar, which has one proton more and one neutron less. Proton-rich nuclei, e.g., \ex{92}Mo, cannot form by neutron capture and various processes and locations for their formation are actively being discussed in the astrophysics community.
+
+About half the elements beyond iron formed in the so called \ac{sproc}, in which the $\beta^{-}$ decay to the stable isobar generally happens faster than another neutron can be captured. This way however, only elements up to bismuth can be made. Heavier elements, e.g., actinides such as thorium and uranium, cannot be formed in the \ac{sproc}. Rapid capture of neutrons, the so-called \ac{rproc}, must thus be invoked to explain their existence.
+
+
+
+\section{Other Stars}
+
+While we have Solar System samples, i.e., CI chondrites, to determine the composition of the solar nebula and thus the Sun precisely, representative rocks of other stars are not available in the Solar System. However, the light of other star still reaches us, i.e., we can see their photosphere and apply the same spectroscopic techniques to determine their elemental composition. 
+
+As discussed in Section~\ref{sec:solar_abundances:sun:stellar_abundances}, to determine the abundances of observed other stars, the stellar atmosphere must be modeled. For this, the size and mass of the star must be known, which is not always simple to determine from observations. Recent massive surveys such as the Sloan Digital Sky Survey\footnote{\url{https://www.sdss.org/}} and the Gaia mission\footnote{\url{https://sci.esa.int/web/gaia/}} have made it possible to determine the elemental composition of many more stars. An overview of existing database can, e.g., be found in \citet{allende-prieto16}. It turns out that the solar neighborhood is a diverse place \citep[see, e.g.,][]{bensby14} and still leaves us for the time being with many open question on the origin of its elements and isotopes.
+
+\section{Reading}
+
+A great reading to further dive into the topic of solar abundances is the recent review by \citet{lodders20}.\footnote{At the time of this writing, the download of the document as a \ac{pdf} file did not succeed. You can also find this article on \href{https://arxiv.org/abs/1912.00844}{ArXiV}.} Some questions and points of discussions for this paper are:
+\begin{itemize}
+    \item Why are meteoritic measurements normalized to a silicon abundance of $10^6$ while astronomical observations are generally given in \ac{dex} noramlized such that the abundance of hydrogen is equal to 12?
+    \item Why can elemental abundances with much higher precision in CI chondrites than in the Sun's photosphere?
+    \item Why does aqueous alteration not affect the chemical composition of CI chondrites?
+    \item Explain from a nuclear physics point of view why there is no deuterium in the Sun.
+    \item Why is it so difficult to determine certain elemental and isotopic abundances, e.g., noble gases and the D/H ratio of the Solar System?
+\end{itemize}
