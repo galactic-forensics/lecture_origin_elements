@@ -49,6 +49,17 @@ They are sorted by filename.
 | sun_structure          | Kelvinsong at English Wikipedia | https://en.wikipedia.org/wiki/File:Sun_poster.svg        | CC BY-SA 3.0 | No      |
 
 
+## Lecture recordings
+
+For students,
+recordings of the lectures are available. 
+These recordings are password protected.
+Here,
+we only provide URLs to the recordings.
+
+[Feb 1, 2021: Solar System Abundances (1)](https://brandeis.zoom.us/rec/share/0ZcuwvhJH14a1SeD6je5ZTMf5MNptBb9-VGy6MvPWw6KrITmL7GRcrw6paGarYb9.r3zQoIRQmLHVHBxu)
+
+
 ## License
 
 All original files in this repository
