@@ -42,6 +42,9 @@ They are sorted by filename.
 
 | Filename               | Attribution                     | Source URL                                               | License / Copyright | Edited? |
 |------------------------|---------------------------------|----------------------------------------------------------|--------------|---------|
+| apollo11_aldrin_solar_sail | NASA                        | https://history.nasa.gov/ap11ann/kippsphotos/5873.jpg    | Public domain | No     |
+| fraunhofer_lines_800px | English wikipedia               | https://upload.wikimedia.org/wikipedia/commons/2/2f/Fraunhofer_lines.svg | Public Domain | No |
+| genesis_spacecraft     | NASA/JPL                        | https://genesismission.jpl.nasa.gov/mission/genSC_collection2.html | Public domain | No |
 | milky_way_profile_wiki | RJHall at English Wikipedia     | https://en.wikipedia.org/wiki/File:Milky_way_profile.svg | CC BY-SA 3.0 | Yes     |
 | sun_structure          | Kelvinsong at English Wikipedia | https://en.wikipedia.org/wiki/File:Sun_poster.svg        | CC BY-SA 3.0 | No      |
 
