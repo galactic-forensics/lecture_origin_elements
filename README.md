@@ -44,9 +44,13 @@ They are sorted by filename.
 |------------------------|---------------------------------|----------------------------------------------------------|--------------|---------|
 | apollo11_aldrin_solar_sail | NASA                        | https://history.nasa.gov/ap11ann/kippsphotos/5873.jpg    | Public domain | No     |
 | fraunhofer_lines_800px | English wikipedia               | https://upload.wikimedia.org/wikipedia/commons/2/2f/Fraunhofer_lines.svg | Public Domain | No |
+| galactic_rotation      | English Wikipedia               | https://en.wikipedia.org/wiki/File:GalacticRotation2.svg | Public domain | No     |
 | genesis_spacecraft     | NASA/JPL                        | https://genesismission.jpl.nasa.gov/mission/genSC_collection2.html | Public domain | No |
+| hubble_diagram         | American Astronomical Society   | https://doi.org/10.1086/320638                         | :copyright: 2001 The American Astronomical Society | No      |
 | milky_way_profile_wiki | RJHall at English Wikipedia     | https://en.wikipedia.org/wiki/File:Milky_way_profile.svg | CC BY-SA 3.0 | Yes     |
 | sun_structure          | Kelvinsong at English Wikipedia | https://en.wikipedia.org/wiki/File:Sun_poster.svg        | CC BY-SA 3.0 | No      |
+| tytler2000_fig2        | Elsevier Science B.V.           | https://doi.org/10.1016/S0370-1573(00)00032-6            | :copyright: 2000 Elsevier Science B.V. | No |
+| wagoner67_fig1         | American Astronomical Society   | https://doi.org/10.1086/149126                           | :copyright: American Astronomical Society | No |
 
 
 ## Lecture recordings
