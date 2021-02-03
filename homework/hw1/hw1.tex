@@ -1,0 +1,181 @@
+\documentclass[letterpaper,12pt,twoside=false,DIV=13]{scrartcl}
+
+%----------------------CONFIG---------------------------
+%math packages
+\usepackage{amsmath,amssymb,amsthm,units,unitsdef}
+
+%bibliography style and citation style, bibstyles to use: plainnat, abbrvnat, unsrtnat, named, chicago
+%otherwise numerical citationstyle will be used
+%\usepackage[authoryear,round]{natbib}
+
+\usepackage{longtable,tabularx,tabulary,multirow,lscape}
+\usepackage[font={sl},format=plain,labelfont=bf]{caption}
+
+% colors
+\usepackage{color,colortbl}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{darkblue}{HTML}{00354C}
+
+\usepackage{booktabs}
+%\usepackage{showkeys} % shows the labels above the references for
+
+%easier development
+\usepackage{ifpdf}
+
+\ifpdf
+    \usepackage[pdftex]{graphicx}
+    \usepackage[]{pdfpages} %for including full pdf pages
+    \usepackage[pdftex,
+        bookmarks,
+        bookmarksopen=true,
+        bookmarksnumbered=true,
+        pdfauthor={Reto Trappitsch},
+        pdftitle={On the origin of elements in the Milky Way - Homework},
+        colorlinks,
+        linkcolor=darkblue,
+        citecolor=darkblue,
+        filecolor=black,
+        urlcolor=darkblue,
+        anchorcolor=black,
+        menucolor=black,
+        breaklinks=true,
+        pageanchor=true, %for jumping to a page
+        plainpages=false,
+        pdfpagelabels=true]{hyperref}
+    \pdfcompresslevel=9
+    \pdfoutput=1
+    \DeclareGraphicsExtensions{.pdf,.png,.jpg,.jpeg}
+\else
+    \usepackage{graphicx}
+\fi
+\usepackage{rotating} % rotate figures
+\usepackage{subcaption}
+\usepackage{wrapfig}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%\addtolength{\headwidth}{\marginparsep} %these change header-rule width
+%\addtolength{\headwidth}{\marginparwidth}
+\lhead{}
+\chead{\small\scshape On the Origin of Elements in the Milky Way} 
+\rhead{} 
+\lfoot{} 
+\cfoot{\thepage} 
+\rfoot{} 
+\renewcommand{\headrulewidth}{.3pt} 
+\renewcommand{\footrulewidth}{.3pt}
+
+% Redefine author as topic
+\newcommand{\topic}{\author}
+
+%
+%Redefining sections as problems
+%
+\makeatletter
+\newenvironment{problem}{\@startsection
+    {section}
+    {1}
+    {-.2em}
+    {-3.5ex plus -1ex minus -.2ex}
+    {2.3ex plus .2ex}
+    {
+        \pagebreak[3] % forces pagebreak when space is small; use \eject for better results
+        \noindent\sffamily\bfseries Problem
+    }
+}
+{
+    %\vspace{1ex}\begin{center} \rule{0.3\linewidth}{.3pt}\end{center}}
+    \begin{center}\large\bfseries\ldots\ldots\ldots\end{center}
+}
+\makeatother
+
+% set enumerate to use letters
+\renewcommand{\theenumi}{\alph{enumi}}
+
+% newcommands
+%============
+% my short cuts
+\providecommand{\e}[1]{\ensuremath{\times 10^{#1}}}
+\providecommand{\ex}[1]{\ensuremath{^{#1}}}
+\providecommand{\dex}[1]{\ensuremath{\delta^{#1}}}
+\newcommand{\nean}{$^{22}$Ne($\alpha$,n)$^{25}$Mg}
+
+% textnormal
+\newcommand{\tn}{\textnormal}
+% textregistered
+\newcommand{\tr}{$^\tn{\textregistered}$}
+
+
+%-------------------DOCUMENT---------------------------
+
+\begin{document}
+
+
+\title{Homework \#1}
+\topic{Solar System Abundances}
+\date{Assigned: Feburary 03, 2021 \qquad Due: February 10, 2021}
+
+\maketitle
+\thispagestyle{fancy}
+
+\noindent\emph{Percentages for each problems of the total grade (100\%) as given. Sub-problems, if present, split the problem's percentage equally. Please show your work!}
+
+\begin{problem}{Element abundances in water (20\%)}
+
+Water on Earth consists of two hydrogen and one oxygen atom. Its chemical formula is H$_2$O. Hydrogen and oxygen on Earth consist of the following isotopes:
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{lrr}
+Isotope     &   Relative Abundance (\%)     & Mass (u)  \\
+\hline
+\ex{1}H     &   99.9885                     &   1.008   \\
+\ex{2}H     &    0.0115                     &   2.014   \\
+\ex{16}O    &   99.757                      &   15.995  \\
+\ex{17}O    &   0.038                       &   16.999  \\
+\ex{18}O    &   0.205                       &   17.999  \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{enumerate}
+    \item Using the values in the table above, calculate the concentration of hydrogen in water by mass and stoichiometrically.
+    \item Heavy water, i.e., water in which both hydrogen atoms are \ex{2}H or deuterium, is commonly used as a coolant and neutron moderator in pressured heavy-water reactors.\footnote{\url{https://en.wikipedia.org/wiki/Heavy_water_reactor}} These nuclear reactors have the advantage that they can use naturally occurring uranium as fuel. The chemical formula of heavy water is \ex{2}H$_2$O, often written as D$_2$O. Calculate (1) the concentration of deuterium in heavy water and (2) the mass difference between heavy water and water.
+\end{enumerate}
+    
+\end{problem}
+
+\begin{problem}{Abundance scale conversion (20\%)}
+
+\begin{enumerate}
+    \item The Solar System initial abundance of hydrogen (linear, atom numbers) is given as $2.59 \times 10^{10}$. Calculate the abundance of silicon in logarithmic / spectroscopic abundance units.
+    \item Now let's assume you have been giving the spectroscopic abundance for oxygen as 8.8. Calculate how many oxygen atoms there are when assuming $10^6$ silicon atoms. Use the same hydrogen abundance as in part a.
+\end{enumerate}
+
+
+\end{problem}
+
+\begin{problem}{Metallicity of a star (20\%)}\label{prob:metallicity}
+
+To express the metallicity of a star, astronomers often use the [Fe/H] value as a proxy for the total metallicity. The metallicity ($Z$) of an object is frequently compared to the solar metallicity. The solar metallicity is commonly abbreviated as $Z_\odot$, where $\odot$ stands for the Sun (and is in fact used for many other variables too, e.g., a solar mass: $M_\odot$). The solar abundance of iron (normalized to Si $=10^6$) is $8.48\times 10^5$. For the following exercises use the hydrogen abundance given in problem 2.
+
+You have observed a star with a 0.3\,dex enhancement in its [Fe/H] ratio. Express this enhancement in terms of solar metallicity $Z_\odot$.
+
+\end{problem}
+
+\begin{problem}{Uncertainty propagation (20\%)}
+Using the same scenario as in problem~\ref{prob:metallicity}, let us assume that the determination of [Fe/H] is associated with a $1\,\sigma$ uncertainty of 0.05\,dex. Calculate the number abundance of iron in this star assuming that is has a solar H/Si elemental ratio and express the number abundance and its uncertainty with respect to silicon normalized to $10^6$. \emph{Hint: A symmetric error in a logarithmic unit will not be symmetric in a linear unit and vice verse.} 
+\end{problem}
+
+
+
+\begin{problem}{Deuterium burning (20\%)}
+
+The present-day Sun contains essentially no deuterium. All of it was burned at the beginning of the Solar System, i.e., when the Sun was a protostar. Research deuterium burning, explain the nuclear reaction that takes place, and its circumstances. Can you speculate why deuterium burning is the first burning stage of the Sun that sets in while it is still a protostar? \emph{(Speculations will not subtract points. A physically sound speculation (not necessarily correct) will earn you a 5\% bonus. The maximum achievable grade remains 100\%.)}
+
+\end{problem}
+
+
+
+\end{document}
