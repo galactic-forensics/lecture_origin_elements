@@ -62,7 +62,7 @@ These recordings are password protected.
 Here,
 we only provide URLs to the recordings.
 
-[Feb 1, 2021: Solar System Abundances (1)](https://brandeis.zoom.us/rec/share/0ZcuwvhJH14a1SeD6je5ZTMf5MNptBb9-VGy6MvPWw6KrITmL7GRcrw6paGarYb9.r3zQoIRQmLHVHBxu)
+[Feb 1, 2021: Solar System Abundances (1)](https://brandeis.zoom.us/rec/share/0ZcuwvhJH14a1SeD6je5ZTMf5MNptBb9-VGy6MvPWw6KrITmL7GRcrw6paGarYb9.r3zQoIRQmLHVHBxu)  
 [Feb 3, 2021: Solar System Abundances (2)](https://brandeis.zoom.us/rec/share/6p_yHF5q8H8ZdqjBjNRkVi-i4MEChsX5n1uwT57qBMvs1yVVYN4eCGzqbjsu6ZCK.f66gq_caX93qzF3B)
 
 
