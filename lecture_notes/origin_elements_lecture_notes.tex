@@ -2,14 +2,18 @@
 
 %----------------------CONFIG---------------------------
 %math packages
-\usepackage{amsmath,amssymb,amsthm,units,unitsdef}
+\usepackage{amsmath,amssymb,amsthm,units,unitsdef,}
 
 %bibliography style and citation style, bibstyles to use: plainnat, abbrvnat, unsrtnat, named, chicago
 %otherwise numerical citationstyle will be used
 \usepackage[authoryear,round]{natbib}
-
 \usepackage{longtable,tabularx,tabulary,multirow,lscape}
 \usepackage[font={sl},format=plain,labelfont=bf]{caption}
+
+% appendix
+\usepackage{appendix}
+\usepackage{xpatch}
+\xpretocmd{\appendixpagename}{\sffamily}{}{}
 
 % colors
 \usepackage{color,colortbl}
@@ -106,7 +110,6 @@
 \begin{document}
 
 \maketitle
-
 % TOC
 \pagenumbering{roman}
 \setcounter{page}{1}
@@ -143,7 +146,8 @@ Specific boxes throughout the text discuss further information. They are defined
 
 \include{solar_system_abundances}
 \include{big_bang_nucleosynthesis}
-% \include{stellar_evolution}
+\include{star_formation}
+% \include{sun}
 
 % Bibliography
 
@@ -151,5 +155,14 @@ Specific boxes throughout the text discuss further information. They are defined
 \addcontentsline{toc}{chapter}{Bibliography} \label{sec:bibliography}
 \bibliographystyle{aasjournal}
 \bibliography{origin_elements}
+
+% Appendix
+\clearpage
+\appendix
+\addappheadtotoc
+\appendixpage
+\clearpage
+
+\include{appendix}
 
 \end{document}

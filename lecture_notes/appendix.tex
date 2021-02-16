@@ -1,0 +1,52 @@
+%!TEX root = origin_elements_lecture_notes.tex
+
+
+
+\chapter{Deriving the Virial Theorem}\label{app:virial_theorem}
+
+We can use the hydrostatic equilibrium equation~\eqref{eqn:star_formation:hydrostatic_equilibrium} to derive the virial theorem that has been used extensively in Chapter~\ref{sec:star_formation}. To start we can multiply the hydrostatic equilibrium equation~\eqref{eqn:star_formation:hydrostatic_equilibrium} on both sites by $4\pi r^3 dr$ and integrate over $r$. Writing this out gives us
+\begin{equation}
+    \int_0^R 4\pi r^3 \frac{dP}{dr} dr = - \int_0^R \rho G \frac{M(r)}{r^2} 4\pi r^3 dr.
+    \label{eqn:app:vt:starting_equation}
+\end{equation}
+
+Let us first discuss the right-hand side of the equation. Minor algebra of this side allows us to rewrite it since we know that $4\pi r^2 \rho dr$ is equal to the mass of a mass shell in the star with thickness dr at distance $r$ from the center. We can thus write this whole part as $dM$. We then have to integrate over the mass instead of the radius. The right-hand side now looks like
+\begin{equation}
+    -\int_0^R \left(\frac{GM(r)}{r}\right) 4\pi r^2\rho dr = -\int_0^M \frac{GM(r)}{r}dM. 
+\end{equation}
+This part is of course equal to the gravitational or potential energy $E_\mathrm{pot}$, see equation~\eqref{eqn:star_formation:potential_energy}.
+
+To evaluate the left-hand side of equation~\eqref{eqn:app:vt:starting_equation} we can use integration by parts for the integration over $dr$. Integration by parts states that
+\begin{equation}
+    \int_a^b u(x) v'(x) dx = \left.u(x)v(x)\right|_a^b - \int_a^b u'(x) v(x) dx.
+\end{equation}
+We can set $u=4\pi r^3$ and $v=P$ and write
+\begin{equation}
+    \begin{aligned}
+        \int_0^R 4\pi r^3 \frac{dP}{dr} dr &= \left.4\pi P r^3\right|_0^R - \int_0^R 12\pi P r^2 dr \\
+        & = -3 \int_0^R 4\pi P r^2 dr.
+    \end{aligned}
+    \label{eqn:app:vt:integrated_lhs}
+\end{equation}
+The first term $4\pi P r^3|_0^R$ is zero because at the inner limit $r=0$ we know that $r(0) = 0$ and at the upper limit $r=R$ we can assume that $P(R) = 0$. Using the ideal gas equation
+\begin{equation}
+    PV = Nk_BT
+\end{equation}
+and the kinetic energy of an ideal gas, which is given as
+\begin{equation}
+    E_\mathrm{kin} = \frac{3}{2} Nk_BT,
+\end{equation}
+we can write the pressure $P$ as
+\begin{equation}
+    P = \frac{2}{3} \frac{E_\mathrm{kin}}{V}.
+\end{equation}
+Plugging this expression for the pressure into equation~\eqref{eqn:app:vt:integrated_lhs}, we can write for the left-hand side of equation~\ref{eqn:app:vt:starting_equation}
+\begin{equation}
+    E_\mathrm{kin} \frac{1}{V} \int_0^R 4\pi r^2 dr.
+\end{equation}
+For a sphere, $\int_0^R 4\pi r^2 dr$ is of course nothing else than its volume, $V$ thus crosses out, and we have determined that the left-hand side of equation~\eqref{eqn:app:vt:starting_equation} is equal to $-2E_\mathrm{kin}$.
+Thus, we have derived the virial theorem, which states that
+\begin{equation}
+    -2E_\mathrm{kin} = E_\mathrm{pot}. 
+\end{equation}
+
