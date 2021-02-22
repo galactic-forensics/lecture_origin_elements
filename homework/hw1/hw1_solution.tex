@@ -1,0 +1,229 @@
+\documentclass[letterpaper,12pt,twoside=false,DIV=13]{scrartcl}
+
+%----------------------CONFIG---------------------------
+%math packages
+\usepackage{amsmath,amssymb,amsthm,units,unitsdef}
+\usepackage[makeroom]{cancel}
+
+%bibliography style and citation style, bibstyles to use: plainnat, abbrvnat, unsrtnat, named, chicago
+%otherwise numerical citationstyle will be used
+%\usepackage[authoryear,round]{natbib}
+
+\usepackage{longtable,tabularx,tabulary,multirow,lscape}
+\usepackage[font={sl},format=plain,labelfont=bf]{caption}
+
+% colors
+\usepackage{color,colortbl}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{darkblue}{HTML}{00354C}
+
+\usepackage{booktabs}
+%\usepackage{showkeys} % shows the labels above the references for
+
+%easier development
+\usepackage{ifpdf}
+
+\ifpdf
+    \usepackage[pdftex]{graphicx}
+    \usepackage[]{pdfpages} %for including full pdf pages
+    \usepackage[pdftex,
+        bookmarks,
+        bookmarksopen=true,
+        bookmarksnumbered=true,
+        pdfauthor={Reto Trappitsch},
+        pdftitle={On the origin of elements in the Milky Way - Homework},
+        colorlinks,
+        linkcolor=darkblue,
+        citecolor=darkblue,
+        filecolor=black,
+        urlcolor=darkblue,
+        anchorcolor=black,
+        menucolor=black,
+        breaklinks=true,
+        pageanchor=true, %for jumping to a page
+        plainpages=false,
+        pdfpagelabels=true]{hyperref}
+    \pdfcompresslevel=9
+    \pdfoutput=1
+    \DeclareGraphicsExtensions{.pdf,.png,.jpg,.jpeg}
+\else
+    \usepackage{graphicx}
+\fi
+\usepackage{rotating} % rotate figures
+\usepackage{subcaption}
+\usepackage{wrapfig}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%\addtolength{\headwidth}{\marginparsep} %these change header-rule width
+%\addtolength{\headwidth}{\marginparwidth}
+\lhead{}
+\chead{\small\scshape On the Origin of Elements in the Milky Way} 
+\rhead{} 
+\lfoot{} 
+\cfoot{\thepage} 
+\rfoot{} 
+\renewcommand{\headrulewidth}{.3pt} 
+\renewcommand{\footrulewidth}{.3pt}
+
+% Redefine author as topic
+\newcommand{\topic}{\author}
+
+%
+%Redefining sections as problems
+%
+\makeatletter
+\newenvironment{problem}{\@startsection
+    {section}
+    {1}
+    {-.2em}
+    {-3.5ex plus -1ex minus -.2ex}
+    {2.3ex plus .2ex}
+    {
+        \pagebreak[3] % forces pagebreak when space is small; use \eject for better results
+        \noindent\sffamily\bfseries Problem
+    }
+}
+{
+    %\vspace{1ex}\begin{center} \rule{0.3\linewidth}{.3pt}\end{center}}
+    \begin{center}\large\bfseries\ldots\ldots\ldots\end{center}
+}
+\makeatother
+
+% set enumerate to use letters
+\renewcommand{\theenumi}{\alph{enumi}}
+
+% newcommands
+%============
+% my short cuts
+\providecommand{\e}[1]{\ensuremath{\times 10^{#1}}}
+\providecommand{\ex}[1]{\ensuremath{^{#1}}}
+\providecommand{\dex}[1]{\ensuremath{\delta^{#1}}}
+\newcommand{\nean}{$^{22}$Ne($\alpha$,n)$^{25}$Mg}
+
+% textnormal
+\newcommand{\tn}{\textnormal}
+% textregistered
+\newcommand{\tr}{$^\tn{\textregistered}$}
+
+
+%-------------------DOCUMENT---------------------------
+
+\begin{document}
+
+
+\title{Homework \#1 -- Solution}
+\topic{Solar System Abundances}
+
+\maketitle
+\thispagestyle{fancy}
+
+
+\begin{problem}{Element abundances in water (20\%)}
+
+\paragraph{Part (a):}The chemical formula of water is H$_2$O. Thus, the stoichiometric abundance of hydrogen can be calculated as
+\begin{equation}
+    N(H) = \frac{2}{2+1} = 67\%.
+\end{equation}
+
+To determine the abundance by mass, we first need to determine the average mass of naturally occurring hydrogen and oxygen. Let $r_{i\mathrm{X}}$ be the relative abundance of isotope $i$ for element X, such that $\sum_i \mathrm{X}_i = 1$. The average mass of hydrogen and oxygen can then be determined as
+\begin{eqnarray}
+    \bar{m_\mathrm{H}} &=& \sum_{i=1}^{2}\left(r_{i\mathrm{H}} \times m_{i\mathrm{H}}\right) = 1.0081\,u \\
+    \bar{m_\mathrm{O}} &=& \sum_{i=16}^{18}\left(r_{i\mathrm{O}} \times m_{i\mathrm{O}}\right) = 15.999\,u .
+\end{eqnarray}
+The concentration of hydrogen in water by mass can then be determined as
+\begin{equation}
+    c(\mathrm{H}) = \frac{2 \bar{m_\mathrm{H}}}{2 \bar{m_\mathrm{H}} + \bar{m_\mathrm{O}}} = 11\%.
+\end{equation}
+
+\paragraph{Part (b):} To calculate the mass concentration of deuterium, we simply need to replace $\bar{m_\mathrm{H}}$ with the mass of deuterium $m_\mathrm{D} = 2.014$\,u. Thus, the concentration of deuterium in water by mass is
+\begin{equation}
+        c(\mathrm{D}) = \frac{2 {m_\mathrm{D}}}{2 {m_\mathrm{D}} + \bar{m_\mathrm{O}}} = 20\%.
+\end{equation}
+
+To compare the masses of H$_2$O and D$_2$O, we can simply divide the two values (other ways of comparison would of course be valid as well).
+\begin{equation}
+    \frac{m_\mathrm{D2O}}{m_\mathrm{H2O}} = 1.11.
+\end{equation}
+    
+\end{problem}
+
+\begin{problem}{Abundance scale conversion (20\%)}
+
+\paragraph{Part (a):} For this part you need to remember that linear, atom number abundances are normalized to $N(\mathrm{Si}) = 10^6$. Using the definition of the spectroscopic abundances (equation (1.3) in the lecture notes) we can calculate
+\begin{equation}
+    A(\mathrm{Si}) = \log_{10} \left(\frac{N(\mathrm{Si})}{N(\mathrm{H})}\right) + 12 = 7.6.
+\end{equation}
+
+\paragraph{Part (b):} For the second part we can simply write the abundance of oxygen again in spectroscopic notation and solve it for the $N(\mathrm{O})$.
+\begin{eqnarray}
+    A(\mathrm{O}) &=& \log_{10} \left(\frac{N(\mathrm{O})}{N(\mathrm{H})}\right) + 12 = 8.8 \\
+    \frac{N(\mathrm{O})}{N(\mathrm{H})} &=& 10^{8.8-12} = 10^{-3.2} \\
+    N(\mathrm{O}) &=& 10^{-3.2} N(\mathrm{H})  = 1.63 \times 10^7.
+\end{eqnarray}
+
+\end{problem}
+
+\begin{problem}{Metallicity of a star (20\%)}\label{prob:metallicity}
+
+Let us write the observed 0.3\,dex as $\Delta$. The bracket notation can be written as
+\begin{equation}
+    \log_{10} \left(\frac{N(\mathrm{Fe})}{N(\mathrm{H})}\right)_\star - \log_{10} \left(\frac{N(\mathrm{Fe})}{N(\mathrm{H})}\right)_\odot = \Delta
+\end{equation}
+This equation can be solved for the ratio in the star as following:
+\begin{eqnarray}
+    \log_{10}\left[\left(\frac{N(\mathrm{Fe})}{N(\mathrm{H})}\right)_\star \left(\frac{N(\mathrm{H})}{N(\mathrm{Fe})}\right)_\odot\right] &=& \Delta \\
+    \underbrace{\left(\frac{N(\mathrm{Fe})}{N(\mathrm{H})}\right)_\star}_{\equiv Z_\star} &=& 10^\Delta \underbrace{\left(\frac{N(\mathrm{Fe})}{N(\mathrm{H})}\right)_\odot}_{\equiv Z_\odot} \label{eqn:metallicity_part_solved} 
+\end{eqnarray}
+Thus we can write the star's metallicity as
+\begin{equation}
+    Z_\star = 10^{0.3} Z_\odot = 2Z_\odot.
+\end{equation}
+
+\end{problem}
+
+\begin{problem}{Uncertainty propagation (20\%)}
+
+Let us first calculate the abundance of iron in the sample. We can directly start using equation~\eqref{eqn:metallicity_part_solved} and solve it for $N(\mathrm{Fe})$. Thus,
+\begin{equation} \label{eqn:prob4}
+    N(\mathrm{Fe}) = 10^{0.3} \left(\frac{N(\mathrm{Fe})}{\cancel{N(\mathrm{H})}}\right)_\odot \cancel{N(\mathrm{H})_\star}
+        = 1.69 \times 10^{6}.
+\end{equation}
+The hydrogen abundance canceled since the problem explicitly states to assume they are equal. 
+
+To calculate the uncertainties, we can use the equation provided in Lodders et al. (2020), page 5 of the preprint. There it states that the percentage uncertainty of a number abundance $U$ with respect to spectroscopic notation is
+\begin{equation}
+    U(\%) = \pm 100 (10^{\pm\delta} -1).
+\end{equation}
+Here, $\delta=0.05$\,dex is the uncertainty of the observation $\Delta = 0.3$\,dex. Note that uncertainties are not going to be symmetric. Plugging in values we can calculate that the $[N(\mathrm{Fe}) / N(\mathrm{H})]_\star$ ratio has an uncertainty of $^{+12.2\%}_{-10.9\%}$, i.e., asymmetric uncertainties. Since hydrogen is as abundant as in the Sun, we can assume that its value has no uncertainty (not realistic, but simplifies the problem for now). Thus, we can calculate the number of iron atoms with uncertainties as
+\begin{equation}
+    N(\mathrm{Fe})_\star = 1.69 \times 10^{6} \left(^{+2.1 \times 10^{5}} _{-1.8 \times 10^{5}}\right).
+\end{equation}
+
+An alternative way to calculate the uncertainties is to determine them by plugging upper and lower bound values into equation~\eqref{eqn:prob4}. The positive and negative uncertainties could then be determined as:
+\begin{eqnarray}
+    \sigma_+ &=& 10^{0.3 + 0.05} N(\mathrm{Fe})_\odot - N(\mathrm{Fe})_\star = 2.1 \times 10^5 \\
+    \sigma_- &=& N(\mathrm{Fe})_\star  - 10^{0.3 - 0.05} N(\mathrm{Fe})_\odot = 1.8 \times 10^5.
+\end{eqnarray}
+As expected, this yields the same result.
+
+\end{problem}
+
+
+
+\begin{problem}{Deuterium burning (20\%)}
+
+Nuclear burning of deuterium takes place via the reaction
+\begin{equation}
+    \mathrm{D} + \mathrm{p} \longrightarrow {^{3}\mathrm{He}} + \gamma
+\end{equation}
+In a protostar, i.e., a young star, this reaction can already take place at temperature around $10^6$\,K. This is significantly lower than today's temperatures in the Sun's core, which exceed $10^7$\,K. We would expect thus that all deuterium in the Sun is gone.
+
+The Sun formed from a gravitationally collapsing molecular cloud. The only reason it does not collapse further today is that hydrogen burning in its core creates radiation pressure that exactly balances the gravitational collapse. This is generally referred to as a hydrostatic equilibrium. During the collapse of the molecular cloud, the central part of the protostar becomes hotter and hotter. Deuterium burning, which sets in at a temperature of around $10^6$\,K will temporarily balance the gravitational force. Once all deuterium is burned, the protostar collapses further until the central temperature reaches above $10^7$\,K, at which point hydrogen fusion to helium starts taking place, again balancing the gravitational force. Since deuterium burning takes place a much lower temperature, it sets in during the protostar phase and burns all the fuel, subsequently collapsing further.
+
+\end{problem}
+
+
+
+\end{document}
