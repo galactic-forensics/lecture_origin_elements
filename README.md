@@ -44,12 +44,13 @@ They are sorted by filename.
 |------------------------|---------------------------------|----------------------------------------------------------|--------------|---------|
 | apollo11_aldrin_solar_sail | NASA                        | https://history.nasa.gov/ap11ann/kippsphotos/5873.jpg    | Public domain | No     |
 | fraunhofer_lines_800px | English wikipedia               | https://upload.wikimedia.org/wikipedia/commons/2/2f/Fraunhofer_lines.svg | Public Domain | No |
+| gaia_hrd               | ESA/Gaia/DPAC                   | http://www.esa.int/esearch?q=hertzsprung+russel+diagram  | [CC BY-SA 3.0 IGO](https://creativecommons.org/licenses/by-sa/3.0/igo/) | No |
 | galactic_rotation      | English Wikipedia               | https://en.wikipedia.org/wiki/File:GalacticRotation2.svg | Public domain | No     |
 | genesis_spacecraft     | NASA/JPL                        | https://genesismission.jpl.nasa.gov/mission/genSC_collection2.html | Public domain | No |
 | horsehead_nebula       | NASA/ESA/Hubble Heritage Team   | https://www.nasa.gov/multimedia/imagegallery/image_feature_2493.html | Public domain | No |
 | hubble_diagram         | American Astronomical Society   | https://doi.org/10.1086/320638                         | :copyright: 2001 The American Astronomical Society | No      |
-| milky_way_profile_wiki | RJHall at English Wikipedia     | https://en.wikipedia.org/wiki/File:Milky_way_profile.svg | CC BY-SA 3.0 | Yes     |
-| sun_structure          | Kelvinsong at English Wikipedia | https://en.wikipedia.org/wiki/File:Sun_poster.svg        | CC BY-SA 3.0 | No      |
+| milky_way_profile_wiki | RJHall at English Wikipedia     | https://en.wikipedia.org/wiki/File:Milky_way_profile.svg | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) | Yes     |
+| sun_structure          | Kelvinsong at English Wikipedia | https://en.wikipedia.org/wiki/File:Sun_poster.svg        | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) | No      |
 | tytler2000_fig2        | arXiv:astro-ph/0001318          | https://arxiv.org/abs/astro-ph/0001318            | ArXiV, prior to 01/2004 | No |
 | wagoner67_fig1         | American Astronomical Society   | https://doi.org/10.1086/149126                           | :copyright: American Astronomical Society | No |
 
@@ -65,6 +66,7 @@ we only provide URLs to the recordings.
 [Feb 1, 2021: Solar System Abundances (1)](https://brandeis.zoom.us/rec/share/0ZcuwvhJH14a1SeD6je5ZTMf5MNptBb9-VGy6MvPWw6KrITmL7GRcrw6paGarYb9.r3zQoIRQmLHVHBxu)  
 [Feb 3, 2021: Solar System Abundances (2)](https://brandeis.zoom.us/rec/share/6p_yHF5q8H8ZdqjBjNRkVi-i4MEChsX5n1uwT57qBMvs1yVVYN4eCGzqbjsu6ZCK.f66gq_caX93qzF3B)
 [Feb 10, 2021: Big Bang Nucleosynthesis](https://brandeis.zoom.us/rec/share/SZ_laq5-VLA9EbPWdzchAR29lHWC9DefxWCBlcWRISBIgENA692kg2R0ogFIiP6L.-s6Mersg85cm45U9?startTime=1612962579000)
+[Feb 22, 2021: Star Formation](https://brandeis.zoom.us/rec/share/ivTRjsUxKt6S2BnlwHeek2eBBsjun2AwgXt6WNc56vbvVG8WgX9V8wDAfc_9xsyE.PiiUOd-OCppfLHCE)
 
 
 ## License
