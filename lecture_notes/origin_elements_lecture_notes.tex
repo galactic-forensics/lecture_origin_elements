@@ -2,7 +2,8 @@
 
 %----------------------CONFIG---------------------------
 %math packages
-\usepackage{amsmath,amssymb,amsthm,units,unitsdef,}
+\usepackage{amsmath,amssymb,amsthm,units,unitsdef}
+\usepackage{wasysym}  % astro symbols
 
 %bibliography style and citation style, bibstyles to use: plainnat, abbrvnat, unsrtnat, named, chicago
 %otherwise numerical citationstyle will be used
@@ -94,12 +95,21 @@
 
 
 
-%=========================================================================================================
+%======================================================
 %title specifications
 
 \title{On the Origin of Elements in the Milky Way}
 \author{Reto Trappitsch}
 \date{Spring semester 2021}
+
+%======================================================
+% UPDATES %
+%======================================================
+% exoplanets
+\newcommand{\ExoplanetsNumber}{4352}  % confirmed
+\newcommand{\ExoplanetDate}{February 26, 2021}
+
+%======================================================
 
 
 
@@ -147,7 +157,7 @@ Specific boxes throughout the text discuss further information. They are defined
 \include{solar_system_abundances}
 \include{big_bang_nucleosynthesis}
 \include{star_formation}
-% \include{sun}
+\include{sun}
 
 % Bibliography
 
