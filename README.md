@@ -45,6 +45,7 @@ They are sorted by filename.
 | apollo11_aldrin_solar_sail | NASA                        | https://history.nasa.gov/ap11ann/kippsphotos/5873.jpg    | Public domain | No     |
 | catseye_nebula | NASA, ESA, HEIC, and The Hubble Heritage Team (STScI / (AURA)  | https://apod.nasa.gov/apod/ap040910.html | Public Domain | No |
 | cno_cycle              | Borb, English Wikipedia         | https://en.wikipedia.org/wiki/CNO_cycle#/media/File:CNO_Cycle.svg | Public domain | No |
+| crab_nebula |  NASA, ESA, NRAO/AUI/NSF and G. Dubner (University of Buenos Aires) | https://www.nasa.gov/image-feature/new-view-of-the-crab-nebula | Public Domain | No |
 | exoplanet_radius_period | Exoplanet Archive, IPAC, Caltech | https://exoplanetarchive.ipac.caltech.edu/exoplanetplots/exo_massperiod.png | Unknown | No
 | fraunhofer_lines_800px | English wikipedia               | https://upload.wikimedia.org/wikipedia/commons/2/2f/Fraunhofer_lines.svg | Public Domain | No |
 | gaia_hrd               | ESA/Gaia/DPAC                   | http://www.esa.int/esearch?q=hertzsprung+russel+diagram  | [CC BY-SA 3.0 IGO](https://creativecommons.org/licenses/by-sa/3.0/igo/) | No |
@@ -53,11 +54,13 @@ They are sorted by filename.
 | horsehead_nebula       | NASA/ESA/Hubble Heritage Team   | https://www.nasa.gov/multimedia/imagegallery/image_feature_2493.html | Public domain | No |
 | hubble_diagram         | American Astronomical Society   | https://doi.org/10.1086/320638                         | :copyright: 2001 The American Astronomical Society | No      |
 | milky_way_profile_wiki | RJHall at English Wikipedia     | https://en.wikipedia.org/wiki/File:Milky_way_profile.svg | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) | Yes     |
+| sn-ia-artistic         | NASA/JPL                        | https://images.nasa.gov/details-PIA22352                 | Public Domain | No |
 | sun_structure          | Kelvinsong at English Wikipedia | https://en.wikipedia.org/wiki/File:Sun_poster.svg        | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) | No      |
 | sun_hrd                | Szczureq                        | https://commons.wikimedia.org/wiki/File:Evolution_of_the_Sun_2_EN.svg | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en) | Yes |
 | triple_alpha           | Borb                            | https://en.wikipedia.org/wiki/Triple-alpha_process#/media/File:Triple-Alpha_Process.svg | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) | No |
 | tytler2000_fig2        | arXiv:astro-ph/0001318          | https://arxiv.org/abs/astro-ph/0001318            | ArXiV, prior to 01/2004 | No |
 | wagoner67_fig1         | American Astronomical Society   | https://doi.org/10.1086/149126                           | :copyright: American Astronomical Society | No |
+| wr124                  | ESA/Hubble & NASA               | https://esahubble.org/images/potw1533a/                  | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | No |
 
 
 ## Lecture recordings

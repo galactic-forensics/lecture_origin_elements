@@ -46,7 +46,8 @@
 		breaklinks=true,
 		pageanchor=true, %for jumping to a page
 		plainpages=false,
-		pdfpagelabels=true]{hyperref}
+		pdfpagelabels=true,
+		breaklinks=true]{hyperref}
 	\pdfcompresslevel=9
 	\pdfoutput=1
 	\DeclareGraphicsExtensions{.pdf,.png,.jpg,.jpeg}
@@ -56,6 +57,9 @@
 \usepackage{rotating} % rotate figures
 \usepackage{subcaption}
 \usepackage{wrapfig}
+
+% break URLs at -
+\def\UrlBreaks{\do\/\do-}
 
 %page style
 %==========
@@ -158,7 +162,7 @@ Specific boxes throughout the text discuss further information. They are defined
 \include{big_bang_nucleosynthesis}
 \include{star_formation}
 \include{sun}
-% \include{massive_stars}
+\include{massive_stars}
 
 % Bibliography
 

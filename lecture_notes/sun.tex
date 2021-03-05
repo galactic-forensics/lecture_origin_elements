@@ -1,6 +1,6 @@
 %!TEX root = origin_elements_lecture_notes.tex
 
-\chapter{The Life and Death of the Sun}
+\chapter{The Life and Death of the Sun}\label{ch:sun}
 
 In the last chapter we have seen how stars form from molecular clouds. We also derived the hydrostatic equilibrium, which is the conditions that stars spend most of their life in, and have analyzed some of its consequences. While we have already determined some key facts about the Sun, in this chapter we discuss the life of the Sun, its place among other stars in the Milky Way, and its ultimate fate in more detail. Understanding the Sun is useful; after all it is the energy source required for life on Earth. However, the Sun is also regularly used in comparison with other stars when discussing their lifetimes and fates.
 
@@ -220,7 +220,7 @@ With ultimately all the hydrogen gone, the Sun itself will further contract unti
 
 Intermediate mass stars ($2\,M_\odot < M \lesssim 8\,M_\odot$) will undergo a similar evolution to the one discussed for the Sun. During the \ac{tpagb} phase though, these stars will undergo multiple, so-called \ac{tdu} events. These events mix material from the intershell with the envelope. As we will see later, the \ac{sproc} takes place in the helium intershell. Thus, these \ac{tdu} events mix freshly nucleosynthesized material from the helium intershell into the convective envelope. Since the envelope gets ultimately ejected into space by stellar winds, \ac{sproc} material is effectively recycled into the Milky Way.
 
-Stars more massive than $5\,M_\odot \lesssim M \lesssim 8\,M_\odot$ furthermore can successfully burn the carbon and oxygen further. The reactions that take place for carbon burning are the following:
+Stars more massive than $5\,M_\odot \lesssim M \lesssim 8\,M_\odot$ furthermore can successfully burn carbon further. The reactions that take place for carbon burning are the following:
 \begin{equation}
     {^{12}}\mathrm{C} + {^{12}}\mathrm{C} \longrightarrow 
     \begin{cases}
@@ -230,17 +230,7 @@ Stars more massive than $5\,M_\odot \lesssim M \lesssim 8\,M_\odot$ furthermore 
         {^{23}}\mathrm{Mg} + n \quad &(*)\\
         {^{24}}\mathrm{Mg} + \gamma
     \end{cases}
-\end{equation}
-For oxygen burning, the reactions are:
-\begin{equation}
-{^{16}}\mathrm{O} + {^{16}}\mathrm{O} \longrightarrow 
-    \begin{cases}
-        {^{24}}\mathrm{Mg} + 2\,{^4}\mathrm{He} \quad & (*)\\
-        {^{28}}\mathrm{Si} + {^4}\mathrm{He}\\
-        {^{31}}\mathrm{P} + p^+\\
-        {^{31}}\mathrm{S} + n\\
-        {^{32}}\mathrm{S} + \gamma
-    \end{cases}
+    \label{eqn:sun:carbon_burning_reactions}
 \end{equation}
 Note that reactions labeled with (*) in fact consume energy and do not produce any. This behavior is however enabled by the high temperatures present during CO burning. Instead of a CO \ac{wd}, stars in this mass range leave behind a ONe \ac{wd}
 
@@ -254,7 +244,7 @@ While the quiescent burning of the Sun takes place over around 10\,Ga, subsequen
     L = L_\odot \left(\frac{M}{M_\odot}\right)^{3.5}. \label{eqn:sun:mass_luminosity_relation}
 \end{equation}
 
-The lifetime of a star is proportional to its luminosity divided by its mass since the mass is proportional to the amount of fuel. We can therefore roughly estimate the lifetime dependency in comparison to the solar lifetime with respect to a star's mass. The dependency yields
+The lifetime of a star is proportional to its mass divided by its luminosity, since the mass is proportional to the amount of fuel (see also, equation~\ref{eqn:star_formation:nuclear_lifetime}). We can therefore roughly estimate the lifetime dependency in comparison to the solar lifetime with respect to a star's mass. The dependency yields
 \begin{equation}
     t_\mathrm{nuc}(M) \approx t_{\odot\mathrm{,total}} \left(\frac{M_\odot}{M}\right)^{2.5}. \label{eqn:sun:stellar_lifetime_estimate}
 \end{equation}
