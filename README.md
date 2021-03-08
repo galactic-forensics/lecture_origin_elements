@@ -74,7 +74,9 @@ we only provide URLs to the recordings.
 - [Feb 1, 2021: Solar System Abundances (1)](https://brandeis.zoom.us/rec/share/0ZcuwvhJH14a1SeD6je5ZTMf5MNptBb9-VGy6MvPWw6KrITmL7GRcrw6paGarYb9.r3zQoIRQmLHVHBxu)  
 - [Feb 3, 2021: Solar System Abundances (2)](https://brandeis.zoom.us/rec/share/6p_yHF5q8H8ZdqjBjNRkVi-i4MEChsX5n1uwT57qBMvs1yVVYN4eCGzqbjsu6ZCK.f66gq_caX93qzF3B)  
 - [Feb 10, 2021: Big Bang Nucleosynthesis](https://brandeis.zoom.us/rec/share/SZ_laq5-VLA9EbPWdzchAR29lHWC9DefxWCBlcWRISBIgENA692kg2R0ogFIiP6L.-s6Mersg85cm45U9?startTime=1612962579000)  
-- [Feb 22, 2021: Star Formation](https://brandeis.zoom.us/rec/share/ivTRjsUxKt6S2BnlwHeek2eBBsjun2AwgXt6WNc56vbvVG8WgX9V8wDAfc_9xsyE.PiiUOd-OCppfLHCE)  
+- [Feb 22, 2021: Star Formation](https://brandeis.zoom.us/rec/share/ivTRjsUxKt6S2BnlwHeek2eBBsjun2AwgXt6WNc56vbvVG8WgX9V8wDAfc_9xsyE.PiiUOd-OCppfLHCE)   
+- [Mar 8, 2021: The Fate of Massive Stars](https://brandeis.zoom.us/rec/share/3MmGWMp-8VSraWwEXjA90nIlnfnBMfrlHBMVyKSCgNMQosEqV7L5wRwVWxROBYkl.J984XKWDwlCF8iaT)
+ 
 
 
 ## License
