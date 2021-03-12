@@ -52,12 +52,12 @@ Before we discuss in detail how \acp{sn} explode, let us discuss the individual 
 \end{figure}
 Figure~\ref{fig:massive_stars:hrds_pignatari_nugrid_set1.2} shows the evolution of massive stars in the \ac{hrd}. Stellar models are for a metallicity of $Z=0.02$ and are taken from \citet{pignatari16}. The paths of the stars on the \ac{hrd} start when they leave the main sequence. While the evolution of the shown stars all look fairly similar, they are vastly different from the fate that lower-mass stars undergo. Here, the $25\,M_\odot$ star is discussed as an example. Such a star lives for around 9\,Ma \citep{meynet03}. Even though massive stars are much rarer than low-mass stars, the short lifetime results in these stars rapidly recycling freshly nucleosynthesized material back into the Milky Way, thus enriching it in metallicity. Recycling also takes place prior to the supernova, since stellar winds can drive parts of the atmosphere out into space. 
 
-\begin{table}[b]
+\begin{table}[b]\label{codebox:nugrid}
 \codebox{NuGrid Collaboration and Data Access}{The \href{https://nugrid.github.io/}{Nucleosynthesis Grid (NuGrid) international collaboration} develops and maintains tools for large-scale nucleosynthesis post-processing simulations and to analyze stellar evolution models created with MESA. Especially interesting is that all stellar models and postprocessing data is released publicly. NuGrid maintains a public JupyterLab server that can be accessed by anybody to explore stars. This systems has also been used to create Figure~\ref{fig:massive_stars:hrds_pignatari_nugrid_set1.2} and is available on the \href{https://astrohub.uvic.ca/}{University of Victoria's AstroHub site}.}
 \end{table}
 
 \paragraph{Helium burning}
-Hydrogen burning takes place for around 90\% of the star's lifetime, mainly via the CNO cycle (see Figure~\ref{fig:sun:energy_generation_hydrogen_fusion}). When the core is exhausted, hydrogen burning continues in a shell. The core starts contracting until the temperature is high enough to ignite helium burning, at which point the star significantly increases in size and becomes a supergiant. Examples of such stars are Rigel or Betelgeuse, a blue and red supergiant, respectively, in the constellation Orion. In fact, on a clear night in winter you can easily identify these two stars by eye due to their color. Helium burning in the core lasts for less than 1\,Ga and during this time, neutron captures can lead to the formation of some heavy nuclei with $A>60$. This is the so-called weak \ac{sproc} and is responsible for the \ac{sproc} isotopes between nickel and strontium. Details on the \ac{sproc} will be discussed in a later chapter. % TODO REFERENCE
+Hydrogen burning takes place for around 90\% of the star's lifetime, mainly via the CNO cycle (see Figure~\ref{fig:sun:energy_generation_hydrogen_fusion}). When the core is exhausted, hydrogen burning continues in a shell. The core starts contracting until the temperature is high enough to ignite helium burning, at which point the star significantly increases in size and becomes a supergiant. Examples of such stars are Rigel or Betelgeuse, a blue and red supergiant, respectively, in the constellation Orion. In fact, on a clear night in winter you can easily identify these two stars by eye due to their color. Helium burning in the core lasts for less than 1\,Ma and during this time, neutron captures can lead to the formation of some heavy nuclei with $A>60$. This is the so-called weak \ac{sproc} and is responsible for the \ac{sproc} isotopes between nickel and strontium. Details on the \ac{sproc} will be discussed in Chapter~\ref{ch:s-process}. 
 
 \paragraph{Carbon, neon, and oxygen burning}
 The ashes left behind after helium burning mainly consist of \ex{12}C and \ex{16}O. Of the possible reactions, carbon burning has the lowest threshold and starts first. The main reactions are as already seen in~\eqref{eqn:sun:carbon_burning_reactions}.
@@ -92,6 +92,7 @@ After neon has efficiently been destroyed, \ex{16}O, \ex{24}Mg, and \ex{28}Si ar
         {^{31}}\mathrm{S} + n\\
         {^{32}}\mathrm{S} + \gamma
     \end{cases}
+    \label{eqn:massive_stars:oxygen_burning_reactions}
 \end{equation}
 Here $d$ stands for a deuterium nucleus. 
 
@@ -108,9 +109,9 @@ Figure~\ref{fig:massive_stars:pre-supernova_structure_schematic} shows a schemat
 
 \infobox{Coulomb barrier}{Since atomic nuclei are positively charged, they repell each other. The Coulomb barrier describes the energy that needs to be overcome in order for two nuclei to interact. With the nuclei at distance $r$ and charges $q_1$ and $q_2$, the Coulomb energy can be written as
 \begin{equation}
-    E_\mathrm{coul} = k \frac{q_1 q_2}{r}.
+    E_\mathrm{coul} = k_C \frac{q_1 q_2}{r}. \label{eqn:massive_stars:coulomb_energy}
 \end{equation}
-Here, $k=8.9876\times10^{9}$\,N\,m$^{2}$\,C$^{-2}$ is Coulomb's constant. 
+Here, $k_C=8.9876\times10^{9}$\,N\,m$^{2}$\,C$^{-2}$ is Coulomb's constant. 
 
 \href{https://en.wikipedia.org/wiki/Quantum_tunnelling}{Quantum tunneling} enables two nuclei to fuse even below this energy. The conditions under which tunneling is allowed are found in the so-called \href{https://en.wikipedia.org/wiki/Gamow_factor}{Gamow window.}}
 
