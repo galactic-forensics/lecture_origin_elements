@@ -1,0 +1,161 @@
+\documentclass[letterpaper,12pt,twoside=false,DIV=11]{scrartcl}
+
+%----------------------CONFIG---------------------------
+%math packages
+\usepackage{amsmath,amssymb,amsthm,units,unitsdef}
+
+%bibliography style and citation style, bibstyles to use: plainnat, abbrvnat, unsrtnat, named, chicago
+%otherwise numerical citationstyle will be used
+%\usepackage[authoryear,round]{natbib}
+
+\usepackage{longtable,tabularx,tabulary,multirow,lscape}
+\usepackage[font={sl},format=plain,labelfont=bf]{caption}
+
+% colors
+\usepackage{color,colortbl}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{darkblue}{HTML}{00354C}
+
+\usepackage{booktabs}
+%\usepackage{showkeys} % shows the labels above the references for
+
+%easier development
+\usepackage{ifpdf}
+
+\ifpdf
+    \usepackage[pdftex]{graphicx}
+    \usepackage[]{pdfpages} %for including full pdf pages
+    \usepackage[pdftex,
+        bookmarks,
+        bookmarksopen=true,
+        bookmarksnumbered=true,
+        pdfauthor={Reto Trappitsch},
+        pdftitle={On the origin of elements in the Milky Way - Homework},
+        colorlinks,
+        linkcolor=darkblue,
+        citecolor=darkblue,
+        filecolor=black,
+        urlcolor=darkblue,
+        anchorcolor=black,
+        menucolor=black,
+        breaklinks=true,
+        pageanchor=true, %for jumping to a page
+        plainpages=false,
+        pdfpagelabels=true]{hyperref}
+    \pdfcompresslevel=9
+    \pdfoutput=1
+    \DeclareGraphicsExtensions{.pdf,.png,.jpg,.jpeg}
+\else
+    \usepackage{graphicx}
+\fi
+\usepackage{rotating} % rotate figures
+\usepackage{subcaption}
+\usepackage{wrapfig}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%\addtolength{\headwidth}{\marginparsep} %these change header-rule width
+%\addtolength{\headwidth}{\marginparwidth}
+\lhead{}
+\chead{\small\scshape On the Origin of Elements in the Milky Way} 
+\rhead{} 
+\lfoot{} 
+\cfoot{\thepage} 
+\rfoot{} 
+\renewcommand{\headrulewidth}{.3pt} 
+\renewcommand{\footrulewidth}{.3pt}
+
+% Redefine author as topic
+\newcommand{\topic}{\author}
+
+%
+%Redefining sections as problems
+%
+\makeatletter
+\newenvironment{problem}{\@startsection
+    {section}
+    {1}
+    {-.2em}
+    {-3.5ex plus -1ex minus -.2ex}
+    {2.3ex plus .2ex}
+    {
+        \pagebreak[3] % forces pagebreak when space is small; use \eject for better results
+        \noindent\sffamily\bfseries Problem
+    }
+}
+{
+    %\vspace{1ex}\begin{center} \rule{0.3\linewidth}{.3pt}\end{center}}
+    \begin{center}\large\bfseries\ldots\ldots\ldots\end{center}
+}
+\makeatother
+
+% set enumerate to use letters
+\renewcommand{\theenumi}{\alph{enumi}}
+
+% newcommands
+%============
+% my short cuts
+\providecommand{\e}[1]{\ensuremath{\times 10^{#1}}}
+\providecommand{\ex}[1]{\ensuremath{^{#1}}}
+\providecommand{\dex}[1]{\ensuremath{\delta^{#1}}}
+\newcommand{\nean}{$^{22}$Ne($\alpha$,n)$^{25}$Mg}
+
+% textnormal
+\newcommand{\tn}{\textnormal}
+% textregistered
+\newcommand{\tr}{$^\tn{\textregistered}$}
+
+
+%-------------------DOCUMENT---------------------------
+
+\begin{document}
+
+
+\title{Homework \#4}
+\topic{Massive stars, \emph{s}-process nucleosynthesis}
+\date{Assigned: March 15, 2021 \qquad Due: March 22, 2021}
+
+\maketitle
+\thispagestyle{fancy}
+
+\noindent\emph{Percentages for each problem of the total grade (100\%) as given. Sub-problems, if present, split the problem's percentage equally. Please show your work!}
+
+\begin{problem}{Isotope Abundances in the Iron Peak (20\%)} \label{prob1}
+
+With a binding energy of 8.7945\,MeV per nucleon, \ex{62}Ni is the most tightly bound nucleus. The isotopes \ex{58}Fe and \ex{56}Fe are the second and third most tightly bound ones with binding energies of 8.7922\,MeV per nucleon and 8.7903\,MeV per nucleon, respectively. Explain why \ex{56}Fe is so much more abundant in the Solar System compared to \ex{58}Fe and \ex{62}Ni.
+
+\end{problem}
+
+\begin{problem}{Supernova Explosion Energy (20\%)}
+
+We have seen that supernovae release a total of around 100\,foe of energy when they explode. Starting with hydrogen and fusing it, how much \ex{56}Fe would you have to produce in order for the energy release to be similar? Express your result in ``useful'' units, i.e., in units that compare to the mass of an object you are familiar with (Earth, Sun, Jupiter, Moon, \dots). \emph{Hint:} You can use the binding energy for \ex{56}Fe as given in Problem~\ref{prob1}, but remember that that binding energy is given per nucleon.
+
+\end{problem}
+
+\begin{problem}{Local Approximation (20\%)}
+Create a figure similar to Figure 6.2 in the lecture notes for the isotopes \ex{126}Xe, \ex{128}Xe, \ex{129}Xe, and \ex{130}Xe. You can use Maxwellian-averaged cross sections from KADoNiS\footnote{\url{https://kadonis.org}} and your preferred solar abundances.
+\begin{enumerate}
+    \item Explain why \ex{128}Xe and \ex{130}Xe adhere to the local approximation.
+    \item Why does \ex{129}Xe not agree at all with the local approximation?
+    \item 5\% Bonus: Explain why \ex{126}Xe does not agree with the local approximation, even though it is shiedled from the \textit{r}-process by \ex{126}Te.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{Exploring a Star (40\%)}
+The following exercise can be done using the Public Astrohub Instance of the NuGrid Collaboration. You will need a (free) GitHub\footnote{\url{https://github.com}} account in order to log in to the Astrohub. 
+Navigate to \url{https://astrohub.uvic.ca/} and click on ``Public \& Outreach''. After signing in with your GitHub account, you should reach the spawner menu. You want to keep the option \texttt{Jupyter Lab}, choose the application \texttt{MESAHub: Run and analyse MESA/NuGrid simulations}, and click \texttt{spawn}. If the spawner menu does not appear but Jupyter lab starts directly, click \texttt{File}, \texttt{Hub Control Panel}, \texttt{Stop My Server} to reach the spawner menu. 
+
+You should now see a Jupyter Lab environment. In the file menu, navigate to \texttt{wendi-examples/Stellar evolution and nucleosynthesis data/} and open the Notebook names \texttt{Star\_explore.ipynb}. This notebook shows you how to explore a $2\,M_\odot$, $Z_\odot$ star. The first part of the notebook explores the stellar evolution model, the second part the post-processed nucleosynthesis calculation. Go through the notebook and answer the following for questions about this star:
+\begin{enumerate}
+    \item The first figure, titled ``Figure 111'' shows a Kippenhahn diagram of the star. What is going on at each step in the black curve? 
+    \item When does the star loose most of its mass? How much mass is lost in total?
+    \item How big (in terms of Lagrangian mass coordinates) is the \ex{13}C-pocket in this stellar model? You can use ``Figure 124'' of the notebook to evaluate the pocket size. Note though that python gives the mass axis some strange factor on the right-most side. Explain your reasoning on how you determined the \ex{13}C-pocket size.
+    \item Using ``Figure 123'', which is the overall most abundant isotope during \textit{s}-process nucleosynthesis and why? For masses $A>80$, which are the two most abundant isotopes? 
+    \item Bonus 5\%: Following up the most abundant isotopes with masses $A>80$: Can you explain why this is expected?
+\end{enumerate}
+
+Feel free to play with the Jupyter Lab and explore other stars, etc. This exercise only gives you a glimpse, but you can modify all of these routines and create your own ones to browse the NuGrid data.
+\end{problem}
+
+\end{document}
