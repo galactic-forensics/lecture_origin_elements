@@ -76,6 +76,7 @@ we only provide URLs to the recordings.
 - [Feb 10, 2021: Big Bang Nucleosynthesis](https://brandeis.zoom.us/rec/share/SZ_laq5-VLA9EbPWdzchAR29lHWC9DefxWCBlcWRISBIgENA692kg2R0ogFIiP6L.-s6Mersg85cm45U9?startTime=1612962579000)  
 - [Feb 22, 2021: Star Formation](https://brandeis.zoom.us/rec/share/ivTRjsUxKt6S2BnlwHeek2eBBsjun2AwgXt6WNc56vbvVG8WgX9V8wDAfc_9xsyE.PiiUOd-OCppfLHCE)   
 - [Mar 8, 2021: The Fate of Massive Stars](https://brandeis.zoom.us/rec/share/3MmGWMp-8VSraWwEXjA90nIlnfnBMfrlHBMVyKSCgNMQosEqV7L5wRwVWxROBYkl.J984XKWDwlCF8iaT)
+- [Mar 15, 2021: Slow Neutron Capture Nucleosynthesis](https://brandeis.zoom.us/rec/share/VWDDWm4GH-fxJ7nsVfd4eOtnm7yk980FZBKp5kKGbNjCOokDz-Ojvz7f2vc_HBCG.gBHktMyIhMjQ5bVk)
  
 
 
