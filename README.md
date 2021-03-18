@@ -54,6 +54,7 @@ They are sorted by filename.
 | horsehead_nebula       | NASA/ESA/Hubble Heritage Team   | https://www.nasa.gov/multimedia/imagegallery/image_feature_2493.html | Public domain | No |
 | hubble_diagram         | American Astronomical Society   | https://doi.org/10.1086/320638                         | :copyright: 2001 The American Astronomical Society | No      |
 | milky_way_profile_wiki | RJHall at English Wikipedia     | https://en.wikipedia.org/wiki/File:Milky_way_profile.svg | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) | Yes     |
+| nanosims               | Eden Camp at English Wikipedia  | https://en.wikipedia.org/wiki/Nanoscale_secondary_ion_mass_spectrometry#/media/File:NanoSIMS50_instrument_diagram.png | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | No |
 | sn-ia-artistic         | NASA/JPL                        | https://images.nasa.gov/details-PIA22352                 | Public Domain | No |
 | sun_structure          | Kelvinsong at English Wikipedia | https://en.wikipedia.org/wiki/File:Sun_poster.svg        | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) | No      |
 | sun_hrd                | Szczureq                        | https://commons.wikimedia.org/wiki/File:Evolution_of_the_Sun_2_EN.svg | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en) | Yes |
