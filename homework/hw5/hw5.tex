@@ -1,0 +1,158 @@
+\documentclass[letterpaper,12pt,twoside=false,DIV=11]{scrartcl}
+
+%----------------------CONFIG---------------------------
+%math packages
+\usepackage{amsmath,amssymb,amsthm,units,unitsdef}
+\usepackage{wasysym}  % astro symbols
+
+%bibliography style and citation style, bibstyles to use: plainnat, abbrvnat, unsrtnat, named, chicago
+%otherwise numerical citationstyle will be used
+%\usepackage[authoryear,round]{natbib}
+
+\usepackage{longtable,tabularx,tabulary,multirow,lscape}
+\usepackage[font={sl},format=plain,labelfont=bf]{caption}
+
+% colors
+\usepackage{color,colortbl}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{darkblue}{HTML}{00354C}
+
+\usepackage{booktabs}
+%\usepackage{showkeys} % shows the labels above the references for
+
+%easier development
+\usepackage{ifpdf}
+
+\ifpdf
+    \usepackage[pdftex]{graphicx}
+    \usepackage[]{pdfpages} %for including full pdf pages
+    \usepackage[pdftex,
+        bookmarks,
+        bookmarksopen=true,
+        bookmarksnumbered=true,
+        pdfauthor={Reto Trappitsch},
+        pdftitle={On the origin of elements in the Milky Way - Homework},
+        colorlinks,
+        linkcolor=darkblue,
+        citecolor=darkblue,
+        filecolor=black,
+        urlcolor=darkblue,
+        anchorcolor=black,
+        menucolor=black,
+        breaklinks=true,
+        pageanchor=true, %for jumping to a page
+        plainpages=false,
+        pdfpagelabels=true]{hyperref}
+    \pdfcompresslevel=9
+    \pdfoutput=1
+    \DeclareGraphicsExtensions{.pdf,.png,.jpg,.jpeg}
+\else
+    \usepackage{graphicx}
+\fi
+\usepackage{rotating} % rotate figures
+\usepackage{subcaption}
+\usepackage{wrapfig}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%\addtolength{\headwidth}{\marginparsep} %these change header-rule width
+%\addtolength{\headwidth}{\marginparwidth}
+\lhead{}
+\chead{\small\scshape On the Origin of Elements in the Milky Way} 
+\rhead{} 
+\lfoot{} 
+\cfoot{\thepage} 
+\rfoot{} 
+\renewcommand{\headrulewidth}{.3pt} 
+\renewcommand{\footrulewidth}{.3pt}
+
+% Redefine author as topic
+\newcommand{\topic}{\author}
+
+%
+%Redefining sections as problems
+%
+\makeatletter
+\newenvironment{problem}{\@startsection
+    {section}
+    {1}
+    {-.2em}
+    {-3.5ex plus -1ex minus -.2ex}
+    {2.3ex plus .2ex}
+    {
+        \pagebreak[3] % forces pagebreak when space is small; use \eject for better results
+        \noindent\sffamily\bfseries Problem
+    }
+}
+{
+    %\vspace{1ex}\begin{center} \rule{0.3\linewidth}{.3pt}\end{center}}
+    \begin{center}\large\bfseries\ldots\ldots\ldots\end{center}
+}
+\makeatother
+
+% set enumerate to use letters
+\renewcommand{\theenumi}{\alph{enumi}}
+
+% newcommands
+%============
+% my short cuts
+\providecommand{\e}[1]{\ensuremath{\times 10^{#1}}}
+\providecommand{\ex}[1]{\ensuremath{^{#1}}}
+\providecommand{\dex}[1]{\ensuremath{\delta^{#1}}}
+\newcommand{\nean}{$^{22}$Ne($\alpha$,n)$^{25}$Mg}
+
+% textnormal
+\newcommand{\tn}{\textnormal}
+% textregistered
+\newcommand{\tr}{$^\tn{\textregistered}$}
+
+
+%-------------------DOCUMENT---------------------------
+
+\begin{document}
+
+
+\title{Homework \#5}
+\topic{Mass Spectrometry, Stardust}
+\date{Assigned: March 22, 2021 \qquad Due: March 29, 2021}
+
+\maketitle
+\thispagestyle{fancy}
+
+\noindent\emph{Percentages for each problem of the total grade (100\%) as given. Sub-problems, if present, split the problem's percentage equally. Please show your work!}
+
+\begin{problem}{Time-of-Flight Mass Analyzer (20\%)}
+In a time-of-flight (TOF) mass analyzer, ions are separated by mass over charge based on the flight time they each take to travel a given distance $d$. After passing an electrical potential ($U$), all ions are given the same energy $E_\mathrm{el} = qU$. Depending on their mass, they will fly through the mass analyzer at different velocities. Show that the flight time is proportional to $\sqrt{m/q}$ and determine the proporitonality constant. What quantities go into the proportianlity constant?
+\end{problem}
+
+\begin{problem}{Delta-Values (20\%)}
+The solar abundances of \ex{46}Ti and \ex{48}Ti are 204 and 1820 (normalized such that silicon is equal to $10^6$).
+\begin{enumerate}
+    \item Calculate the $\delta^{46}\mathrm{Ti}_{48}$ for a sample that shows a titanium isotope ratio of $^{46}\mathrm{Ti}/{^{48}}\mathrm{Ti} = 0.2$.
+    \item What would it mean if a study reports $\delta^{46}\mathrm{Ti}_{48} = -1000 \permil$?
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{Solar System Contamination (20\%)}
+The \textit{s}-process model by Lugaro et al. (2018), see Figure 7.10 in the lecture notes, predicts for a $M=2.5\,M_\odot$, $Z=2Z_\odot$ star the following $\delta$-values for the zirconium isotopic composition in the last thermal pulse in which most of the mass-loss happens:
+\begin{itemize}
+    \item $\delta^{92}\mathrm{Zr}_{94} = -207\permil$
+    \item $\delta^{96}\mathrm{Zr}_{94} = -937\permil$
+\end{itemize}
+Assume that the measured presolar grian composition is a mixture of this \textit{s}-process component and some solar contamination. This contamination would have solar composition. In the Solar System, the relative abundances of \ex{92}Zr, \ex{94}Zr, and \ex{96}Zr are 17.146\%, 17.38\%, and 2.799\%, respectively. Create a $\delta$-plot analogous to Figure 7.10 where you show (1) the \textit{s}-process composition, (2) the solar composition, and (3) a mixing line in between the two. \emph{Hint:} Mixing is not linear in $\delta$-units, thus you must calculate mixing with isotope ratios.
+\end{problem}
+
+\begin{problem}{Number of Atoms per Presolar Grain (20\%)}
+Assume that you have a spherical SiC grain with $1\,\mu$m radius. The density of SiC is $3.21$\,g\,cm$^{-3}$ and the molar mass about 40\,g\,mol$^{-1}$. 
+\begin{enumerate}
+    \item With Avogadro's constant $N_A=6.022\times10^{23}$\,mol$^{-1}$, calculate the number of SiC molecules in the grain.
+    \item Assume that iron (molar mass: 56\,g\,mol$^{-1}$) has a concentration in the grain of 10\,ppm by weight. Calculate the number of iron atoms in the grain. \textit{Hint:} Be careful to not mix up weight fractions and number fractions!
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{Solar System SiC? (20\%)}
+The constituents of the Solar System condensed from a hot molecular cloud. Explain why all SiC grains found in meteorites are bona fide stardust samples. Why did no SiC condense in the solar nebula?
+\end{problem}
+
+\end{document}
