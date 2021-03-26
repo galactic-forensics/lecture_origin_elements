@@ -55,6 +55,9 @@ They are sorted by filename.
 | hubble_diagram         | American Astronomical Society   | https://doi.org/10.1086/320638                         | :copyright: 2001 The American Astronomical Society | No      |
 | milky_way_profile_wiki | RJHall at English Wikipedia     | https://en.wikipedia.org/wiki/File:Milky_way_profile.svg | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) | Yes     |
 | nanosims               | Eden Camp at English Wikipedia  | https://en.wikipedia.org/wiki/Nanoscale_secondary_ion_mass_spectrometry#/media/File:NanoSIMS50_instrument_diagram.png | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | No |
+| nova_v1369             | NASA/MSFC/ESSSA/Aaron Kingery   | https://www.nasa.gov/watchtheskies/new-nova-star-australia.html | Public domain | No |
+| nova_reac_net          | Denissenkov et al. (2014)       | https://doi.org/10.1093/mnras/stu1000                    | :copyright: 2014, The Authors | No |
+| nova_schematic_nature_astro | Trappitsch (2019)          | https://doi.org/10.1038/s41550-019-0838-4                | :copyright: 2019, Springer Nature Limited | No |
 | sn-ia-artistic         | NASA/JPL                        | https://images.nasa.gov/details-PIA22352                 | Public Domain | No |
 | sun_structure          | Kelvinsong at English Wikipedia | https://en.wikipedia.org/wiki/File:Sun_poster.svg        | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) | No      |
 | sun_hrd                | Szczureq                        | https://commons.wikimedia.org/wiki/File:Evolution_of_the_Sun_2_EN.svg | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en) | Yes |
