@@ -1,0 +1,147 @@
+\documentclass[letterpaper,12pt,twoside=false,DIV=11]{scrartcl}
+
+%----------------------CONFIG---------------------------
+%math packages
+\usepackage{amsmath,amssymb,amsthm,units,unitsdef}
+
+%bibliography style and citation style, bibstyles to use: plainnat, abbrvnat, unsrtnat, named, chicago
+%otherwise numerical citationstyle will be used
+%\usepackage[authoryear,round]{natbib}
+
+\usepackage{longtable,tabularx,tabulary,multirow,lscape}
+\usepackage[font={sl},format=plain,labelfont=bf]{caption}
+
+% colors
+\usepackage{color,colortbl}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{darkblue}{HTML}{00354C}
+
+\usepackage{booktabs}
+%\usepackage{showkeys} % shows the labels above the references for
+
+%easier development
+\usepackage{ifpdf}
+
+\ifpdf
+    \usepackage[pdftex]{graphicx}
+    \usepackage[]{pdfpages} %for including full pdf pages
+    \usepackage[pdftex,
+        bookmarks,
+        bookmarksopen=true,
+        bookmarksnumbered=true,
+        pdfauthor={Reto Trappitsch},
+        pdftitle={On the origin of elements in the Milky Way - Homework},
+        colorlinks,
+        linkcolor=darkblue,
+        citecolor=darkblue,
+        filecolor=black,
+        urlcolor=darkblue,
+        anchorcolor=black,
+        menucolor=black,
+        breaklinks=true,
+        pageanchor=true, %for jumping to a page
+        plainpages=false,
+        pdfpagelabels=true]{hyperref}
+    \pdfcompresslevel=9
+    \pdfoutput=1
+    \DeclareGraphicsExtensions{.pdf,.png,.jpg,.jpeg}
+\else
+    \usepackage{graphicx}
+\fi
+\usepackage{rotating} % rotate figures
+\usepackage{subcaption}
+\usepackage{wrapfig}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%\addtolength{\headwidth}{\marginparsep} %these change header-rule width
+%\addtolength{\headwidth}{\marginparwidth}
+\lhead{}
+\chead{\small\scshape On the Origin of Elements in the Milky Way} 
+\rhead{} 
+\lfoot{} 
+\cfoot{\thepage} 
+\rfoot{} 
+\renewcommand{\headrulewidth}{.3pt} 
+\renewcommand{\footrulewidth}{.3pt}
+
+% Redefine author as topic
+\newcommand{\topic}{\author}
+
+%
+%Redefining sections as problems
+%
+\makeatletter
+\newenvironment{problem}{\@startsection
+    {section}
+    {1}
+    {-.2em}
+    {-3.5ex plus -1ex minus -.2ex}
+    {2.3ex plus .2ex}
+    {
+        \pagebreak[3] % forces pagebreak when space is small; use \eject for better results
+        \noindent\sffamily\bfseries Problem
+    }
+}
+{
+    %\vspace{1ex}\begin{center} \rule{0.3\linewidth}{.3pt}\end{center}}
+    \begin{center}\large\bfseries\ldots\ldots\ldots\end{center}
+}
+\makeatother
+
+% set enumerate to use letters
+\renewcommand{\theenumi}{\alph{enumi}}
+
+% newcommands
+%============
+% my short cuts
+\providecommand{\e}[1]{\ensuremath{\times 10^{#1}}}
+\providecommand{\ex}[1]{\ensuremath{^{#1}}}
+\providecommand{\dex}[1]{\ensuremath{\delta^{#1}}}
+\newcommand{\nean}{$^{22}$Ne($\alpha$,n)$^{25}$Mg}
+
+% textnormal
+\newcommand{\tn}{\textnormal}
+% textregistered
+\newcommand{\tr}{$^\tn{\textregistered}$}
+
+
+%-------------------DOCUMENT---------------------------
+
+\begin{document}
+
+
+\title{Homework \#6}
+\topic{Classical Novae, Monte Carlo Error Propagation}
+\date{Assigned: March 31, 2021 \qquad Due: April 14, 2021}
+
+\maketitle
+\thispagestyle{fancy}
+
+\noindent\emph{Percentages for each problem of the total grade (100\%) as given. Sub-problems, if present, split the problem's percentage equally. Please show your work!}
+
+\begin{problem}{Proper Pressure and Mass Ejections (20\%)}
+\begin{enumerate}
+    \item For a white dwarf with a fixed size of $\approx 0.01\,R_\odot$, plot the accreted mass ($M_\mathrm{accr}$) as a function of the white dwarf mass ($M_\mathrm{WD}$) in the range $1\,M_\odot \leq M_\mathrm{WD} \leq 1.4\,M_\odot$. Assume a proper pressure of $10^{19}$\,Pa. What is the trend and how do you interpret it?
+    \item What is the total accreted mass for a $1.2\,M_\odot$ white dwarf that is necessary for the thermonuclear runaway to occur? What is the average density of this white dwarf compared to the Sun's average density?
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{Recurrent Timescale for Classical Nova (20\%)}
+Using the accreted mass calculated above for the $1.2\,M_\odot$ white dwarf and mass accretion rate of $10^{-7}\,M_\odot\,\mathrm{a}^{-1} \leq \dot{M} \leq 10^{-11}\,M_\odot\,\mathrm{a}^{-1}$, calculate how often you would expect such a nova to occur. How is it possible that recurrent nova happen with time intervals of 10\,a to 100\,a?
+\end{problem}
+
+\begin{problem}{Classical Novae versus Type Ia Supernovae (20\%)}
+We have seen that classical novae and type Ia supernovae have very similar origins. Both events take place in binary star systems. Discuss the difference between a classical nova and a SN-Ia, assuming the latter takes place in the framework of the single-degenerate scenario.
+\end{problem}
+
+\begin{problem}{Monte Carlo Error Propagation (40\%)}
+In the \href{https://github.com/galactic-forensics/lecture_origin_elements}{GitHub repository} for the class you can find a Jupyter notebook in the \texttt{hw6} folder. The notebook is named \texttt{Introduction to MC in Python.ipynb}. \href{https://github.com/galactic-forensics/lecture_origin_elements/blob/main/homework/hw6/Introduction%20MC%20in%20Python.ipynb}{Here is also a direct link to the notebook}. This notebook gives an introduction to Monte Carlo error propagation. Follow through the notebook.
+
+At the end of the notebook there are three exercises, the third one being a bonus exercise. Solve these exercises in Python. Feel free to submit your solution as a Jupyter notebook.
+
+If you are having problems running the provided Jupyter notebook on your own computer, you can use the Astrohub\footnote{\url{https://astrohub.uvic.ca}} that you already used for homework \#4. You can upload the provided Jupyter notebook there via drag-and-drop into the file menu. Please let me know if you encounter any issues!
+\end{problem}
+
+\end{document}
