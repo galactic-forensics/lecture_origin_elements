@@ -82,6 +82,7 @@ we only provide URLs to the recordings.
 - [Mar 8, 2021: The Fate of Massive Stars](https://brandeis.zoom.us/rec/share/3MmGWMp-8VSraWwEXjA90nIlnfnBMfrlHBMVyKSCgNMQosEqV7L5wRwVWxROBYkl.J984XKWDwlCF8iaT)
 - [Mar 15, 2021: Slow Neutron Capture Nucleosynthesis](https://brandeis.zoom.us/rec/share/VWDDWm4GH-fxJ7nsVfd4eOtnm7yk980FZBKp5kKGbNjCOokDz-Ojvz7f2vc_HBCG.gBHktMyIhMjQ5bVk)
 - [Mar 22, 2021: Stardust](https://brandeis.zoom.us/rec/share/TSaHGPQbnYbcWNHau_w3oiepw4mq6TW38lQkw5bziH29G3KQNfBaWCHU8xADtket.DGt9FTlLI-YBd8Js)
+- [Mar 31, 2021: Classical Novae](https://brandeis.zoom.us/rec/share/u9SQoq3I4ujIm3VDgs_4WIgFc7p9HTAD5-VVkw5QpOjIayzVJTCC-9-0oksN_4Iz.N9UnRcgQJyEDCWC2)
  
 
 
