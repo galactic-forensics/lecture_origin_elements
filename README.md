@@ -44,9 +44,10 @@ They are sorted by filename.
 |------------------------|---------------------------------|----------------------------------------------------------|--------------|---------|
 | apollo11_aldrin_solar_sail | NASA                        | https://history.nasa.gov/ap11ann/kippsphotos/5873.jpg    | Public domain | No     |
 | catseye_nebula | NASA, ESA, HEIC, and The Hubble Heritage Team (STScI / (AURA)  | https://apod.nasa.gov/apod/ap040910.html | Public Domain | No |
-| cno_cycle              | Borb, English Wikipedia         | https://en.wikipedia.org/wiki/CNO_cycle#/media/File:CNO_Cycle.svg | Public domain | No |
+| cno_cycle              | Borb at English Wikipedia         | https://en.wikipedia.org/wiki/CNO_cycle#/media/File:CNO_Cycle.svg | Public domain | No |
 | crab_nebula |  NASA, ESA, NRAO/AUI/NSF and G. Dubner (University of Buenos Aires) | https://www.nasa.gov/image-feature/new-view-of-the-crab-nebula | Public Domain | No |
 | exoplanet_radius_period | Exoplanet Archive, IPAC, Caltech | https://exoplanetarchive.ipac.caltech.edu/exoplanetplots/exo_massperiod.png | Unknown | No
+| fission_fragments      | JWB at English Wikipedia        | https://en.wikipedia.org/wiki/Nuclear_fission#/media/File:ThermalFissionYield.svg | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) | No |
 | fraunhofer_lines_800px | English wikipedia               | https://upload.wikimedia.org/wikipedia/commons/2/2f/Fraunhofer_lines.svg | Public Domain | No |
 | gaia_hrd               | ESA/Gaia/DPAC                   | http://www.esa.int/esearch?q=hertzsprung+russel+diagram  | [CC BY-SA 3.0 IGO](https://creativecommons.org/licenses/by-sa/3.0/igo/) | No |
 | galactic_rotation      | English Wikipedia               | https://en.wikipedia.org/wiki/File:GalacticRotation2.svg | Public domain | No     |
@@ -58,6 +59,8 @@ They are sorted by filename.
 | nova_v1369             | NASA/MSFC/ESSSA/Aaron Kingery   | https://www.nasa.gov/watchtheskies/new-nova-star-australia.html | Public domain | No |
 | nova_reac_net          | Denissenkov et al. (2014)       | https://doi.org/10.1093/mnras/stu1000                    | :copyright: 2014, The Authors | No |
 | nova_schematic_nature_astro | Trappitsch (2019)          | https://doi.org/10.1038/s41550-019-0838-4                | :copyright: 2019, Springer Nature Limited | No |
+| ns-merger              | University of Warwick/Mark Garlick | https://www.eso.org/public/images/eso1733s/           | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | No |
+| rproc_path             | Frank Timmes                    | http://cococubed.asu.edu/images/nuclide_chart/table_nuclei11.pdf | "free to use in any manner one wishes" | No |
 | sn-ia-artistic         | NASA/JPL                        | https://images.nasa.gov/details-PIA22352                 | Public Domain | No |
 | snia_2d_models         | American Astronomical Society   | https://doi.org/10.1088/0004-637X/739/2/93               | :copyright: 2001 The American Astronomical Society | Yes |
 | sun_structure          | Kelvinsong at English Wikipedia | https://en.wikipedia.org/wiki/File:Sun_poster.svg        | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) | No      |
