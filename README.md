@@ -88,6 +88,7 @@ we only provide URLs to the recordings.
 - [Mar 22, 2021: Stardust](https://brandeis.zoom.us/rec/share/TSaHGPQbnYbcWNHau_w3oiepw4mq6TW38lQkw5bziH29G3KQNfBaWCHU8xADtket.DGt9FTlLI-YBd8Js)
 - [Mar 31, 2021: Classical Novae](https://brandeis.zoom.us/rec/share/u9SQoq3I4ujIm3VDgs_4WIgFc7p9HTAD5-VVkw5QpOjIayzVJTCC-9-0oksN_4Iz.N9UnRcgQJyEDCWC2)
 - [Apr 14, 2021: P-Nuclei](https://brandeis.zoom.us/rec/share/lxBY6F8yDyDzV-Wqk38iiNpVCgqW3blzWbxrR9WKtazUw2zC4Ypxj3luLjgSldGx.xoYRQL16uP3xZ2qj) 
+- [Apr 19, 2021: R-Process](https://brandeis.zoom.us/rec/share/IIaowL5VwQIIHiJ73lKgLIy90MSVA_7o72KFP5Hq1SHIVOEmNvh3v7pdFDpPfHGi.BIddo5K3vJIo5H5w)
 
 
 ## License
