@@ -1,0 +1,162 @@
+\documentclass[letterpaper,12pt,twoside=false,DIV=11]{scrartcl}
+
+%----------------------CONFIG---------------------------
+%math packages
+\usepackage{amsmath,amssymb,amsthm,units,unitsdef}
+
+%bibliography style and citation style, bibstyles to use: plainnat, abbrvnat, unsrtnat, named, chicago
+%otherwise numerical citationstyle will be used
+%\usepackage[authoryear,round]{natbib}
+
+\usepackage{longtable,tabularx,tabulary,multirow,lscape}
+\usepackage[font={sl},format=plain,labelfont=bf]{caption}
+
+% colors
+\usepackage{color,colortbl}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{darkblue}{HTML}{00354C}
+
+\usepackage{booktabs}
+%\usepackage{showkeys} % shows the labels above the references for
+
+%easier development
+\usepackage{ifpdf}
+
+\ifpdf
+    \usepackage[pdftex]{graphicx}
+    \usepackage[]{pdfpages} %for including full pdf pages
+    \usepackage[pdftex,
+        bookmarks,
+        bookmarksopen=true,
+        bookmarksnumbered=true,
+        pdfauthor={Reto Trappitsch},
+        pdftitle={On the origin of elements in the Milky Way - Homework},
+        colorlinks,
+        linkcolor=darkblue,
+        citecolor=darkblue,
+        filecolor=black,
+        urlcolor=darkblue,
+        anchorcolor=black,
+        menucolor=black,
+        breaklinks=true,
+        pageanchor=true, %for jumping to a page
+        plainpages=false,
+        pdfpagelabels=true]{hyperref}
+    \pdfcompresslevel=9
+    \pdfoutput=1
+    \DeclareGraphicsExtensions{.pdf,.png,.jpg,.jpeg}
+\else
+    \usepackage{graphicx}
+\fi
+\usepackage{rotating} % rotate figures
+\usepackage{subcaption}
+\usepackage{wrapfig}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%\addtolength{\headwidth}{\marginparsep} %these change header-rule width
+%\addtolength{\headwidth}{\marginparwidth}
+\lhead{}
+\chead{\small\scshape On the Origin of Elements in the Milky Way} 
+\rhead{} 
+\lfoot{} 
+\cfoot{\thepage} 
+\rfoot{} 
+\renewcommand{\headrulewidth}{.3pt} 
+\renewcommand{\footrulewidth}{.3pt}
+
+% Redefine author as topic
+\newcommand{\topic}{\author}
+
+%
+%Redefining sections as problems
+%
+\makeatletter
+\newenvironment{problem}{\@startsection
+    {section}
+    {1}
+    {-.2em}
+    {-3.5ex plus -1ex minus -.2ex}
+    {2.3ex plus .2ex}
+    {
+        \pagebreak[3] % forces pagebreak when space is small; use \eject for better results
+        \noindent\sffamily\bfseries Problem
+    }
+}
+{
+    %\vspace{1ex}\begin{center} \rule{0.3\linewidth}{.3pt}\end{center}}
+    \begin{center}\large\bfseries\ldots\ldots\ldots\end{center}
+}
+\makeatother
+
+% set enumerate to use letters
+\renewcommand{\theenumi}{\alph{enumi}}
+
+% newcommands
+%============
+% my short cuts
+\providecommand{\e}[1]{\ensuremath{\times 10^{#1}}}
+\providecommand{\ex}[1]{\ensuremath{^{#1}}}
+\providecommand{\dex}[1]{\ensuremath{\delta^{#1}}}
+\newcommand{\nean}{$^{22}$Ne($\alpha$,n)$^{25}$Mg}
+
+% textnormal
+\newcommand{\tn}{\textnormal}
+% textregistered
+\newcommand{\tr}{$^\tn{\textregistered}$}
+
+
+%-------------------DOCUMENT---------------------------
+
+\begin{document}
+
+
+\title{Homework \#7}
+\topic{\textit{p}-nuclei formation, \textit{r}-process}
+\date{Assigned: April 19, 2021 \qquad Due: April 26, 2021}
+
+\maketitle
+\thispagestyle{fancy}
+
+\noindent\emph{Percentages for each problem of the total grade (100\%) as given. Sub-problems, if present, split the problem's percentage equally. Please show your work!}
+
+\begin{problem}{The Distance of Gamma-Ray Bursts (20\%)}
+Assume that the measured energy fluence of a gamma-ray burst is $10^{-7}$\,J\,m$^{-2}$. Calculate the energy of the original event assuming that:
+\begin{enumerate}
+    \item The source is in the Oort cloud of comets within our Solar System at a distance of 50\,kAU.
+    \item The source is extragalactic at a distance of 1\,Gpc.
+\end{enumerate}
+Compare these energies to each other and to other stellar events. 
+
+\noindent\emph{(Problem adopted after example 4.1 in Carroll \& Ostlie (2017), ``An Introduction to Modern Astrophysics'', 2nd edn. (Cambridge University Press)\footnote{doi: \href{http://doi.org/10.1017/9781108380980}{\texttt{10.1017/9781108380980}}})}
+
+\end{problem}
+
+\begin{problem}{Uranium in the Early Solar System (20\%)}
+Natural uranium consists of two isotopes that are long-lived enough to have survived the 4.567\,Ga since the formation of the Solar System. These are \ex{235}U with a half-life of $7.038\times10^8$\,a and \ex{238}U with a half-life of $4.468\times10^{9}$\,a. The current abundance of these uranium isotopes is 0.00724 and 0.992742, respectively.
+
+\begin{enumerate}
+    \item Calculate the uranium isotopic composition in the early Solar System.
+    \item Assuming that the \textit{r}-process makes \ex{235}U and \ex{238}U in equal proportions, when did the \textit{r}-process take place that formed our uranium?
+    \item Bonus 5\%: Would the \ex{235}U enrichment in the early Solar System be enough to drive a nuclear power plant without further enrichments? How about a nuclear weapon?
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{Primary vs. Secondary Processes (20\%)}
+Explain the difference between a primary versus a secondary nucleosynthesis process. Discuss for the \textit{s}- and \textit{r}-process the category they fall into. Are the \textit{p}-nuclei formed in a primary or secondary process? Explain.
+\end{problem}
+
+
+\begin{problem}{\textit{s}-, \textit{r}-, and \textit{p}- nuclei (20\%)}
+Give examples of 5 nuclei each that are \textit{s}-only, \textit{r}-only, and \textit{p}-only and state why these nuclei cannot be made by other processes. Hint: You can assume that \ex{100}Mo is almost exclusively an \textit{r}-only nucleus. 
+
+A chart of the nuclides might help with this exercise. If you don't have a paper copy, you can find many free, online versions. A very detailed chart can be found on the website of the International Atomic Energy Agency (IAEA).\footnote{\url{https://www-nds.iaea.org/relnsd/vcharthtml/VChartHTML.html}}
+\end{problem}
+
+
+\begin{problem}{it (20\%)}
+The neutron density in the \textit{r}-process is variable, but a typical value would be $\rho_n \sim 10^{22}\,\mathrm{cm}^{-3}$. One neutron has a mass of $m_n = 1.674\times10^{-27}$\,kg. Calculate the density of the neutrons and compare to water, which has a density of $1$\,g\,cm$^{-3}$. Why does the \textit{r}-process not take place in the ocean?
+\end{problem}
+
+\end{document}
