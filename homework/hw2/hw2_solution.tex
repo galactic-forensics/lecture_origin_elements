@@ -1,0 +1,227 @@
+\documentclass[letterpaper,12pt,twoside=false,DIV=11]{scrartcl}
+
+%----------------------CONFIG---------------------------
+%math packages
+\usepackage{amsmath,amssymb,amsthm,units,unitsdef}
+
+%bibliography style and citation style, bibstyles to use: plainnat, abbrvnat, unsrtnat, named, chicago
+%otherwise numerical citationstyle will be used
+%\usepackage[authoryear,round]{natbib}
+
+\usepackage{longtable,tabularx,tabulary,multirow,lscape}
+\usepackage[font={sl},format=plain,labelfont=bf]{caption}
+
+% colors
+\usepackage{color,colortbl}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{darkblue}{HTML}{00354C}
+
+\usepackage{booktabs}
+%\usepackage{showkeys} % shows the labels above the references for
+
+%easier development
+\usepackage{ifpdf}
+
+\ifpdf
+    \usepackage[pdftex]{graphicx}
+    \usepackage[]{pdfpages} %for including full pdf pages
+    \usepackage[pdftex,
+        bookmarks,
+        bookmarksopen=true,
+        bookmarksnumbered=true,
+        pdfauthor={Reto Trappitsch},
+        pdftitle={On the origin of elements in the Milky Way - Homework},
+        colorlinks,
+        linkcolor=darkblue,
+        citecolor=darkblue,
+        filecolor=black,
+        urlcolor=darkblue,
+        anchorcolor=black,
+        menucolor=black,
+        breaklinks=true,
+        pageanchor=true, %for jumping to a page
+        plainpages=false,
+        pdfpagelabels=true]{hyperref}
+    \pdfcompresslevel=9
+    \pdfoutput=1
+    \DeclareGraphicsExtensions{.pdf,.png,.jpg,.jpeg}
+\else
+    \usepackage{graphicx}
+\fi
+\usepackage{rotating} % rotate figures
+\usepackage{subcaption}
+\usepackage{wrapfig}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%\addtolength{\headwidth}{\marginparsep} %these change header-rule width
+%\addtolength{\headwidth}{\marginparwidth}
+\lhead{}
+\chead{\small\scshape On the Origin of Elements in the Milky Way} 
+\rhead{} 
+\lfoot{} 
+\cfoot{\thepage} 
+\rfoot{} 
+\renewcommand{\headrulewidth}{.3pt} 
+\renewcommand{\footrulewidth}{.3pt}
+
+% Redefine author as topic
+\newcommand{\topic}{\author}
+
+%
+%Redefining sections as problems
+%
+\makeatletter
+\newenvironment{problem}{\@startsection
+    {section}
+    {1}
+    {-.2em}
+    {-3.5ex plus -1ex minus -.2ex}
+    {2.3ex plus .2ex}
+    {
+        \pagebreak[3] % forces pagebreak when space is small; use \eject for better results
+        \noindent\sffamily\bfseries Problem
+    }
+}
+{
+    %\vspace{1ex}\begin{center} \rule{0.3\linewidth}{.3pt}\end{center}}
+    \begin{center}\large\bfseries\ldots\ldots\ldots\end{center}
+}
+\makeatother
+
+% set enumerate to use letters
+\renewcommand{\theenumi}{\alph{enumi}}
+
+% newcommands
+%============
+% my short cuts
+\providecommand{\e}[1]{\ensuremath{\times 10^{#1}}}
+\providecommand{\ex}[1]{\ensuremath{^{#1}}}
+\providecommand{\dex}[1]{\ensuremath{\delta^{#1}}}
+\newcommand{\nean}{$^{22}$Ne($\alpha$,n)$^{25}$Mg}
+
+% textnormal
+\newcommand{\tn}{\textnormal}
+% textregistered
+\newcommand{\tr}{$^\tn{\textregistered}$}
+
+
+%-------------------DOCUMENT---------------------------
+
+\begin{document}
+
+
+\title{Homework \#2 -- Solution}
+\topic{Big Bang Nucleosynthesis, Stellar Evolution}
+
+\maketitle
+\thispagestyle{fancy}
+
+
+\begin{problem}{Primordial versus Stellar Helium (20\%)}
+
+First let us convert the energy that is released when fusing 4 H to \ex{4}He to Joules. 1\,eV is equal to $1.602\times10^{-19}$\,J, thus the total $\Delta E = 4.534 \times 10^{-12}$\,J. The total amount of energy produced during the Sun's lifetime ($t_\odot$) assuming constant luminosity is simply
+\begin{equation}
+    E_\mathrm{tot} = L_\odot t_\odot.
+\end{equation}
+The number of \ex{4}He atoms can then be written as
+\begin{equation}
+    n_\mathrm{4He} = \frac{L_\odot t_\odot}{\Delta E}.
+\end{equation}
+This value, multiplied by the mass of \ex{4}He of $m_\mathrm{4He} = 6.646 \times 10^{-27}$\,kg. In order to get the mass fraction in terms of the mass of the Sun that has been produced during the whole lifetime of the Sun, we can write
+\begin{equation}
+    \frac{M_\mathrm{4He}}{M_\odot} = n_\mathrm{4He} m_\mathrm{4He} = \frac{L_\odot t_\odot m_\mathrm{4He}}{\Delta E M_\odot} \approx 4\%.
+\end{equation}
+
+This shows that only little helium is made in stars, thus, the majority of helium indeed must have formed in the Big Bang.
+
+\end{problem}
+
+\begin{problem}{Distances and redshifts (20\%)}
+
+\begin{enumerate}
+    \item Equation (2.6) of the lecture notes shows Hubbles law. We know the speed $\dot{R}$ at which the Tadpole galaxy is moving away, and Hubble's constant $H_0$ is given as $70\,$km\,s$^{-1}$\,Mpc$^{-1}$. We can thus calculate the distance $R$ as
+    \begin{equation}
+        R = \frac{\dot{R}}{H_0} = 134\,\mathrm{Mpc}.
+    \end{equation}
+    Since 1\,Mpc is equal to 3.26\,Mly, we can calculate the distance to the Tadpole galaxy as 437 million light years.
+
+    \item From equation (2.6) and (2.8) in the lecture notes we can write
+    \begin{equation}
+        \frac{\lambda_0}{\lambda} = \frac{\lambda_r}{\lambda_s} = \sqrt{\frac{1+\beta}{1-\beta}} = 1+z.
+    \end{equation}
+    With the speed of light ($c=3\times10^{5}$\,km\,s$^{-1}$), the factor $\beta = \frac{v}{c}$ can be calculated for the Tadpole Galaxy. This results in
+    \begin{align}
+        \frac{\lambda_0}{\lambda} &= 1.0318\\
+        \Rightarrow z &= 0.0318.
+    \end{align}
+\end{enumerate}
+
+
+\end{problem}
+
+
+\begin{problem}{Jeans Radius for the Solar System (20\%)} 
+    Solving equation (3.8) for $R$ as the Jeans radius we get
+    \begin{equation}
+        R = \frac{G\mu M_\odot}{5kT}. \label{eqn:rjeans}
+    \end{equation}
+    To calculate the average mass fraction of the gas we know that hydrogen occurs as H$_2$ molecules. By mass fractions we have approximately 75\% hydrogen and 25\%He. The number ratio of hydrogen to helium in the Solar System is thus $n_\mathrm{H}/n_\mathrm{He} = 12$ and we can calculate the number ratio of H$_2$ to He as
+    \begin{equation}
+        \frac{n_\mathrm{H2}}{n_\mathrm{He}} = 6.
+    \end{equation}
+    Calculating the average mass per molecule $\mu$ then yields
+    \begin{equation}
+        \mu = \frac{6 m_\mathrm{H2} + m_\mathrm{He}}{7} \approx 2.3\,\mathrm{amu}.
+    \end{equation}
+    Plugging all values into equation~\eqref{eqn:rjeans} we get for the Jeans radius
+    \begin{equation}
+        R = 7.3\times10^{14}\,\mathrm{m} \approx 5\times10^{3}\,\mathrm{AU}.
+    \end{equation}
+
+\end{problem}
+
+\begin{problem}{Kepler's Third Law of Planetary Motion (20\%)}
+
+    The virial theorem states that kinetic and potential energy are related such that
+    \begin{equation}
+        E_\mathrm{pot} + 2E_\mathrm{kin} = 0.
+    \end{equation}
+    For a planet in motion we can write the two energies as
+    \begin{align}
+        E_\mathrm{pot} &= G\frac{Mm}{r^2}\\
+        E_\mathrm{kin} &= \frac{1}{2}mv^2.
+    \end{align}
+    Here, $m$ is the mass of the planet, $M$ the mass of the central body (Sun in the case of the Solar System), and $r$ the orbital distance. Plugging these equations into the virial theorem yields
+    \begin{align}
+       -G\frac{Mm}{r^2} + mv^2 &= 0 \\
+       -G\frac{M}{r^2} + v^2 = 0. \label{eqn:kepler_1}
+    \end{align}
+    The orbital velocity is related to radius via the body's orbital period $T$ such that
+    \begin{equation}
+        v = \frac{2\pi r}{T}.
+    \end{equation}
+    Plugging this into equation~\eqref{eqn:kepler_1} and solving for $T^2/r^3$ yields
+    \begin{equation}
+        \frac{T^2}{r^3} = \frac{4\pi^2}{GM}.
+    \end{equation}
+    The gravitational constant $G$ times the mass of the central body $M$ is constant, thus showing that the $T^2/r^3$ is indeed constant for all planets.
+
+\end{problem}
+
+
+\begin{problem}{The day(s) the Earth Stood Still (20\%)}
+
+    The described scenario is equivalent to the free fall time discussed in the lecture notes in Section~3.1.2. We can simply solve equation (3.11) for $\tau_\mathrm{ff}$, which results in
+    \begin{equation}
+        \tau_\mathrm{ff} = \sqrt{\frac{T_P^{2}}{32}}.
+    \end{equation}
+    Knowing the period of Earth's regular orbit to be $T_P = 365.24\,$d, we can calculate the free fall time as
+    \begin{equation}
+        \tau_\mathrm{ff} = 64.6\,\mathrm{d}.
+    \end{equation}
+
+\end{problem}
+
+\end{document}
