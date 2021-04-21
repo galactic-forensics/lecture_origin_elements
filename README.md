@@ -47,7 +47,6 @@ They are sorted by filename.
 | cno_cycle              | Borb at English Wikipedia         | https://en.wikipedia.org/wiki/CNO_cycle#/media/File:CNO_Cycle.svg | Public domain | No |
 | crab_nebula |  NASA, ESA, NRAO/AUI/NSF and G. Dubner (University of Buenos Aires) | https://www.nasa.gov/image-feature/new-view-of-the-crab-nebula | Public Domain | No |
 | exoplanet_radius_period | Exoplanet Archive, IPAC, Caltech | https://exoplanetarchive.ipac.caltech.edu/exoplanetplots/exo_massperiod.png | Unknown | No
-| fission_fragments      | JWB at English Wikipedia        | https://en.wikipedia.org/wiki/Nuclear_fission#/media/File:ThermalFissionYield.svg | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) | No |
 | fraunhofer_lines_800px | English wikipedia               | https://upload.wikimedia.org/wikipedia/commons/2/2f/Fraunhofer_lines.svg | Public Domain | No |
 | gaia_hrd               | ESA/Gaia/DPAC                   | http://www.esa.int/esearch?q=hertzsprung+russel+diagram  | [CC BY-SA 3.0 IGO](https://creativecommons.org/licenses/by-sa/3.0/igo/) | No |
 | galactic_rotation      | English Wikipedia               | https://en.wikipedia.org/wiki/File:GalacticRotation2.svg | Public domain | No     |
