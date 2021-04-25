@@ -52,7 +52,12 @@ They are sorted by filename.
 | galactic_rotation      | English Wikipedia               | https://en.wikipedia.org/wiki/File:GalacticRotation2.svg | Public domain | No     |
 | genesis_spacecraft     | NASA/JPL                        | https://genesismission.jpl.nasa.gov/mission/genSC_collection2.html | Public domain | No |
 | horsehead_nebula       | NASA/ESA/Hubble Heritage Team   | https://www.nasa.gov/multimedia/imagegallery/image_feature_2493.html | Public domain | No |
-| hubble_diagram         | American Astronomical Society   | https://doi.org/10.1086/320638                         | :copyright: 2001 The American Astronomical Society | No      |
+| hubble_diagram         | American Astronomical Society   | https://doi.org/10.1086/320638                           | :copyright: 2001 The American Astronomical Society | No |
+| kobayashi11_fig10a     | American Astronomical Society   | https://doi.org/10.1088/0004-637X/729/1/16               | :copyright: 2011 The American Astronomical Society | No |
+| kobayashi20_fig1ab     | American Astronomical Society   | https://doi.org/10.3847/1538-4357/abae65                 | :copyright: 2020 The American Astronomical Society | No |
+| kobayashi20_fig3       | American Astronomical Society   | https://doi.org/10.3847/1538-4357/abae65                 | :copyright: 2020 The American Astronomical Society | No |
+| kobayashi20_fig32      | American Astronomical Society   | https://doi.org/10.3847/1538-4357/abae65                 | :copyright: 2020 The American Astronomical Society | No |
+| kobayashi20_fig39      | C. Kobayashi / American Astronomical Society   | https://doi.org/10.3847/1538-4357/abae65 | :copyright: C. Kobayashi 2020 / 2020 The American Astronomical Society | No |
 | milky_way_profile_wiki | RJHall at English Wikipedia     | https://en.wikipedia.org/wiki/File:Milky_way_profile.svg | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) | Yes     |
 | nanosims               | Eden Camp at English Wikipedia  | https://en.wikipedia.org/wiki/Nanoscale_secondary_ion_mass_spectrometry#/media/File:NanoSIMS50_instrument_diagram.png | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | No |
 | nova_v1369             | NASA/MSFC/ESSSA/Aaron Kingery   | https://www.nasa.gov/watchtheskies/new-nova-star-australia.html | Public domain | No |
@@ -60,6 +65,8 @@ They are sorted by filename.
 | nova_schematic_nature_astro | Trappitsch (2019)          | https://doi.org/10.1038/s41550-019-0838-4                | :copyright: 2019, Springer Nature Limited | No |
 | ns-merger              | University of Warwick/Mark Garlick | https://www.eso.org/public/images/eso1733s/           | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | No |
 | rproc_path             | Frank Timmes                    | http://cococubed.asu.edu/images/nuclide_chart/table_nuclei11.pdf | "free to use in any manner one wishes" | No |
+| schmidt_kennicutt      | American Astronomical Society   | https://doi.org/10.1086/305588                           | :copyright: 1998 The American Astronomical Society | No      |
+| sculptor               | ESO/J. Emerson/VISTA. Acknowledgment: Cambridge Astronomical Survey Unit | https://www.eso.org/public/images/eso1025a/ | [CC By 3.0](https://creativecommons.org/licenses/by/3.0/) | No |
 | sn-ia-artistic         | NASA/JPL                        | https://images.nasa.gov/details-PIA22352                 | Public Domain | No |
 | snia_2d_models         | American Astronomical Society   | https://doi.org/10.1088/0004-637X/739/2/93               | :copyright: 2001 The American Astronomical Society | Yes |
 | sun_structure          | Kelvinsong at English Wikipedia | https://en.wikipedia.org/wiki/File:Sun_poster.svg        | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) | No      |
