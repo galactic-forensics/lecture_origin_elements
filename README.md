@@ -42,7 +42,9 @@ They are sorted by filename.
 
 | Filename               | Attribution                     | Source URL                                               | License / Copyright | Edited? |
 |------------------------|---------------------------------|----------------------------------------------------------|--------------|---------|
+| al26_galaxy            | MPE Garching/Roland Diehl       | https://www2011.mpe.mpg.de/gamma/science/lines/26Al/figures/26Al_ComptMap26_spec_innerGal.jpg | :copyright: Roland Diehl | No |
 | apollo11_aldrin_solar_sail | NASA                        | https://history.nasa.gov/ap11ann/kippsphotos/5873.jpg    | Public domain | No     |
+| carina_nebula | NASA, ESA, and M. Livio and the Hubble 20th Anniversary Team (STScI) | https://www.nasa.gov/multimedia/imagegallery/image_feature_1647.html | Public Domain | No |
 | catseye_nebula | NASA, ESA, HEIC, and The Hubble Heritage Team (STScI / (AURA)  | https://apod.nasa.gov/apod/ap040910.html | Public Domain | No |
 | cno_cycle              | Borb at English Wikipedia         | https://en.wikipedia.org/wiki/CNO_cycle#/media/File:CNO_Cycle.svg | Public domain | No |
 | crab_nebula |  NASA, ESA, NRAO/AUI/NSF and G. Dubner (University of Buenos Aires) | https://www.nasa.gov/image-feature/new-view-of-the-crab-nebula | Public Domain | No |
@@ -69,8 +71,11 @@ They are sorted by filename.
 | sculptor               | ESO/J. Emerson/VISTA. Acknowledgment: Cambridge Astronomical Survey Unit | https://www.eso.org/public/images/eso1025a/ | [CC By 3.0](https://creativecommons.org/licenses/by/3.0/) | No |
 | sn-ia-artistic         | NASA/JPL                        | https://images.nasa.gov/details-PIA22352                 | Public Domain | No |
 | snia_2d_models         | American Astronomical Society   | https://doi.org/10.1088/0004-637X/739/2/93               | :copyright: 2001 The American Astronomical Society | Yes |
+| sol_sys_formation      | NASA/JPL                        | https://www.nasa.gov/multimedia/imagegallery/image_feature_311.html | Public Domain | No |
+| stellar_fireworks      | NASA/JPL-Caltech/Harvard-Smithsonian CfA | https://www.nasa.gov/multimedia/imagegallery/image_feature_1253.html | Public Domain | No |
 | sun_structure          | Kelvinsong at English Wikipedia | https://en.wikipedia.org/wiki/File:Sun_poster.svg        | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) | No      |
 | sun_hrd                | Szczureq                        | https://commons.wikimedia.org/wiki/File:Evolution_of_the_Sun_2_EN.svg | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en) | Yes |
+| trappitsch18_fig2      | American Astronomical Society   | https://doi.org/10.3847/2041-8213/aabba9                 | :copyright: 2018 The American Astronomical Society | No |
 | triple_alpha           | Borb                            | https://en.wikipedia.org/wiki/Triple-alpha_process#/media/File:Triple-Alpha_Process.svg | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) | No |
 | tytler2000_fig2        | arXiv:astro-ph/0001318          | https://arxiv.org/abs/astro-ph/0001318            | ArXiV, prior to 01/2004 | No |
 | wagoner67_fig1         | American Astronomical Society   | https://doi.org/10.1086/149126                           | :copyright: American Astronomical Society | No |
