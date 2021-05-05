@@ -101,12 +101,15 @@ we only provide URLs to the recordings.
 - [Apr 14, 2021: P-Nuclei](https://brandeis.zoom.us/rec/share/lxBY6F8yDyDzV-Wqk38iiNpVCgqW3blzWbxrR9WKtazUw2zC4Ypxj3luLjgSldGx.xoYRQL16uP3xZ2qj) 
 - [Apr 19, 2021: R-Process](https://brandeis.zoom.us/rec/share/IIaowL5VwQIIHiJ73lKgLIy90MSVA_7o72KFP5Hq1SHIVOEmNvh3v7pdFDpPfHGi.BIddo5K3vJIo5H5w)
 - [Apr 26, 2021: GCE](https://brandeis.zoom.us/rec/share/qI1zNb2CnMR1y9nMVDDt2Vl7qxtRYne6UiWZPRMYr-7pVcpsdN2P8AOXJUyZvgNz.Z16w7_Ai7uUVJEil)
+- [May 3, 2021: SLRs in the Early Solar System](https://brandeis.zoom.us/rec/share/cf9qFy0Ztl-4Wk2qMF2dD_dSgXRJrOcsUjlnxePolRkOke7g7matpgFjEEviUEk.-7jMydaArfkh8nJJ)
 
 
 ## License
 
 All original files in this repository
-are published under the MIT license,
+are published under the 
+[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+license,
 see [LICENSE.md](LICENSE.md) for details.
 Image licenses for non-original files
 are as defined in the lecture notes themselves
