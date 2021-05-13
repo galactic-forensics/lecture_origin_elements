@@ -3,7 +3,6 @@
 %----------------------CONFIG---------------------------
 %math packages
 \usepackage{amsmath,amssymb,amsthm,units,unitsdef}
-\usepackage{listings}
 
 %bibliography style and citation style, bibstyles to use: plainnat, abbrvnat, unsrtnat, named, chicago
 %otherwise numerical citationstyle will be used
@@ -113,41 +112,36 @@
 \begin{document}
 
 
-\title{Homework \#8}
-\topic{Galactic Chemical Evolution}
-\date{Assigned: April 28, 2021 \qquad Due: May 12, 2021}
+\title{Homework \#6 -- Solution}
+\topic{Classical Novae, Monte Carlo Error Propagation}
+\date{} 
 
 \maketitle
 \thispagestyle{fancy}
 
-\textbf{Please submit your answers to the questions below in writing. Please also submit a copy of the Jupyter notebook that contains your best case scenario, i.e., your optimized parameters (question f).}
 
-This homework set focuses on exploring a simple GCE model. As in homework \#4, you will be using a Jupyter notebook that is available on AstroHub.\footnote{\url{https://astrohub.uvic.ca}, see homework \#4 for details.} 
-
-The Jupyter notebook you will be using can be found in the following folder on AstroHub: \texttt{/wendi-examples/Galactic\_chemical\_evolution\_school/}. The file is named \texttt{HS\_GCE\_Step\_1\_Constrain\_MW\_model.ipynb}. You should execute this file on AstroHub in order to have all data available.
-
-\textbf{Attention:} The notebook has a small error in it and won't produce plots in its current stage. Please put the following in a cell before the first plot: \texttt{\%matplotlib inline}. Then delete all lines that say \texttt{\%matplotlib nbagg}. Plotting should now work.
-
-Please read through the whole notebook in order to understand the different assumptions, etc. You will be modifying the parameters for run 2, e.g., the following lines:
-
-\lstset{language=Python}
-\begin{lstlisting}
-# Set of parameters for the second run
-# !! Please modify whatever you want !!
-sfe = 0.04
-t_star = 1.0e8
-in_mag = 1.0
-\end{lstlisting}
-
-Please work on the following questions:
+\begin{problem}{Proper Pressure and Mass Ejections}
 \begin{enumerate}
-    \item What do the parameters \texttt{sfe}, \texttt{t\_star}, and \texttt{in\_mag} represent?
-    \item Set \texttt{t\_star} and \texttt{in\_mag} equal to the example and change \texttt{sfe}. How do the SFR, the ISM gas mass, and the [Fe/H] vary over the age of the galaxy? Interpret these trends with respect to the the change of \texttt{sfe}.
-    \item Set \texttt{sfe} and \texttt{in\_mag} equal to the example and change \texttt{t\_star}. How do the SFR, the ISM gas mass, and the [Fe/H] vary over the age of the galaxy? Interpret these trends with respect to the the change of \texttt{t\_star}.
-    \item Set \texttt{sfe} and \texttt{t\_star} equal to the example and change \texttt{in\_mag}. How do the SFR, the ISM gas mass, and the [Fe/H] vary over the age of the galaxy? Interpret these trends with respect to the the change of \texttt{in\_mag}.
-    \item Can you find a parameter set that brings the integrated stellar mass, the SFR, ISM gas mass, and the [Fe/H] into agreement with the Milky Way observations?
-    % \item Bonus 10\%: How does the inflow rate change with the parameters discussed above? (See Section on ``Extra Material''.)
+    \item {A plot of the accreted mass as a function of the white dwarf mass can be found below.
+        \begin{center}
+            \includegraphics[width=0.75\textwidth]{proper_pressure_figure_1a}
+        \end{center}
+        With increasing white dwarf mass, the required mass to be accreted decreases. At higher white dwarf masses, the proper pressure is higher and therefore, nova explosions can happen earlier, i.e., at less total accreted mass.}
+    \item {The accreted mass for a white dwarf of $1.2\,M_\odot$ required for it to explode is $9.2 \times 10^{-4}\,M_\odot$. At a radius of $0.01\,R_\odot$ the white dwarf will be 1.2 million times denser than the Sun.}
 \end{enumerate}
 
-There are several more examples on AstroHub that show you more GCE details. Please feel free to look into them, be curious, play, and have fun!
+\end{problem}
+
+\begin{problem}{Recurrent Timescale for Classical Nova}
+For the given mass accretion rates, the time scales for a nova to recur is between $9.2 \times 10^{7}$\,a and $9.2 \times 10^{3}$\,a. In order for recurring novae to explode in time intervals of 10\,a to 100\,a, such a system must either have a higher mass accretion rate or a lower required proper pressure for the thermonuclear runaway to occur.
+\end{problem}
+
+\begin{problem}{Classical Novae versus Type Ia Supernovae}
+In both scenarios, matter from a main-sequence companion star is accreted onto a white dwarf. In the case of the SN-Ia however, the white dwarf's mass must already be close to the Chandrasekhar mass of around $1.4\,M_\odot$. Once that mass limit is exceeded, the star undergoes a core collapse and explodes as a supernova. For lower mass white dwarfs, this limit is not exceeded and the star accretes mass until a classical nova explosion takes place.
+\end{problem}
+
+\begin{problem}{Monte Carlo Error Propagation}
+See solutions notebook online.
+\end{problem}
+
 \end{document}

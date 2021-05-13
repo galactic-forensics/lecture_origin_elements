@@ -1,0 +1,230 @@
+\documentclass[letterpaper,12pt,twoside=false,DIV=11]{scrartcl}
+
+%----------------------CONFIG---------------------------
+%math packages
+\usepackage{amsmath,amssymb,amsthm,units,unitsdef}
+
+%bibliography style and citation style, bibstyles to use: plainnat, abbrvnat, unsrtnat, named, chicago
+%otherwise numerical citationstyle will be used
+%\usepackage[authoryear,round]{natbib}
+
+\usepackage{longtable,tabularx,tabulary,multirow,lscape}
+\usepackage[font={sl},format=plain,labelfont=bf]{caption}
+
+% colors
+\usepackage{color,colortbl}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{darkblue}{HTML}{00354C}
+
+\usepackage{booktabs}
+%\usepackage{showkeys} % shows the labels above the references for
+
+%easier development
+\usepackage{ifpdf}
+
+\ifpdf
+    \usepackage[pdftex]{graphicx}
+    \usepackage[]{pdfpages} %for including full pdf pages
+    \usepackage[pdftex,
+        bookmarks,
+        bookmarksopen=true,
+        bookmarksnumbered=true,
+        pdfauthor={Reto Trappitsch},
+        pdftitle={On the origin of elements in the Milky Way - Homework},
+        colorlinks,
+        linkcolor=darkblue,
+        citecolor=darkblue,
+        filecolor=black,
+        urlcolor=darkblue,
+        anchorcolor=black,
+        menucolor=black,
+        breaklinks=true,
+        pageanchor=true, %for jumping to a page
+        plainpages=false,
+        pdfpagelabels=true]{hyperref}
+    \pdfcompresslevel=9
+    \pdfoutput=1
+    \DeclareGraphicsExtensions{.pdf,.png,.jpg,.jpeg}
+\else
+    \usepackage{graphicx}
+\fi
+\usepackage{rotating} % rotate figures
+\usepackage{subcaption}
+\usepackage{wrapfig}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%\addtolength{\headwidth}{\marginparsep} %these change header-rule width
+%\addtolength{\headwidth}{\marginparwidth}
+\lhead{}
+\chead{\small\scshape On the Origin of Elements in the Milky Way} 
+\rhead{} 
+\lfoot{} 
+\cfoot{\thepage} 
+\rfoot{} 
+\renewcommand{\headrulewidth}{.3pt} 
+\renewcommand{\footrulewidth}{.3pt}
+
+% Redefine author as topic
+\newcommand{\topic}{\author}
+
+%
+%Redefining sections as problems
+%
+\makeatletter
+\newenvironment{problem}{\@startsection
+    {section}
+    {1}
+    {-.2em}
+    {-3.5ex plus -1ex minus -.2ex}
+    {2.3ex plus .2ex}
+    {
+        \pagebreak[3] % forces pagebreak when space is small; use \eject for better results
+        \noindent\sffamily\bfseries Problem
+    }
+}
+{
+    %\vspace{1ex}\begin{center} \rule{0.3\linewidth}{.3pt}\end{center}}
+    \begin{center}\large\bfseries\ldots\ldots\ldots\end{center}
+}
+\makeatother
+
+% set enumerate to use letters
+\renewcommand{\theenumi}{\alph{enumi}}
+
+% newcommands
+%============
+% my short cuts
+\providecommand{\e}[1]{\ensuremath{\times 10^{#1}}}
+\providecommand{\ex}[1]{\ensuremath{^{#1}}}
+\providecommand{\dex}[1]{\ensuremath{\delta^{#1}}}
+\newcommand{\nean}{$^{22}$Ne($\alpha$,n)$^{25}$Mg}
+
+% textnormal
+\newcommand{\tn}{\textnormal}
+% textregistered
+\newcommand{\tr}{$^\tn{\textregistered}$}
+
+
+%-------------------DOCUMENT---------------------------
+
+\begin{document}
+
+
+\title{Homework \#7 --- Solution}
+\topic{\textit{p}-nuclei formation, \textit{r}-process}
+\date{}
+
+\maketitle
+\thispagestyle{fancy}
+
+
+\begin{problem}{The Distance of Gamma-Ray Bursts}
+Let us write the measured energy fluence as $f = 10^{-7}$\,J\,m$^{-2}$. Assuming that one of these sources homogeneously distributes its energy over at a distance $r$ over a sphere with the same radius, we can calculate the energy per unit area as
+\begin{align}
+    E &= fA  \\
+    A &= 4 \pi r^{2} \\
+    \rightarrow\ E &= 4\pi r^{2} A. \label{eqn:pq:energy}
+\end{align}
+
+\begin{itemize}
+    \item For the Oort cloud, a distance of 50\,kAU was given. One astronomical unit is equivalent to around 150 million km, therefore, $r=50\,\mathrm{kAU} = 7.5\times10^{15}$\,m. Plugging this into equation~\ref{eqn:pq:energy} gives:
+    \begin{equation}
+        E = 7 \times 10^{25}\,\mathrm{J}.
+    \end{equation}
+    \item Analoge to above calculation, we first need to transfer 1\,Gpc to meters. This results in $r = 1\,\mathrm{Gpc} = 3.086\times10^{25}\,\mathrm{m}$. Plugging into equation~\ref{eqn:pq:energy} results in:
+    \begin{equation}
+        E = 1.2\times10^{45}\,J.
+    \end{equation}
+\end{itemize}
+The difference between the two scenarios is almost 20 order of magnitudes, which demonstrates the importance of knowing the distance to GRBs in order to understand their provenance. Furthermore, the extragalactic event is around ten times stronger than the 1\,foe expected in visible energy from a supernova. GRBs thus, if extragalactic, must be associated with some of the strongest events in the universe.
+\end{problem}
+
+\begin{problem}{Uranium in the Early Solar System}
+Let us define the relative abundances of the two uranium isotopes as $r_{235} = 0.00724$ and $r_{238} = 0.992742$. Furthermore, let the half-lives be $T_{1/2,235} = 7.038\times10^{8}$\,a and $T_{1/2,238} = 4.467\times10^{9}$. The amount of a species that decays radioactively for a given time $t$ can be written as
+\begin{equation}
+    N(t) = N_0 \exp\left(-\frac{\ln(2) t}{T_{1/2}}\right). \label{rad_decay}
+\end{equation}
+Here, $N(t)$ is the abundance after time $t$ and $N_0$ is the abundance at time zero.
+
+\begin{itemize}
+    \item To calculate the \ex{235}U/\ex{238}U in the early Solar System, we can solve equation~\eqref{rad_decay} for $N_0$ and form the ratio between the two isotopes. This results in
+    \begin{equation}
+        \frac{N_{0,235}}{N_{0,238}} = 
+            \underbrace{\frac{N(t)_{235}}{N(t)_{238}}}_{=r_{235}/r_{238}}
+            \frac
+                {\exp\left(-\frac{\ln(2) t}{T_{1/2,235}}\right)}
+                {\exp\left(-\frac{\ln(2) t}{T_{1/2,238}}\right)}. \label{ratio_u}
+    \end{equation}
+    Plugging in $t=4.568\,Ga$ results in an original \ex{235}U/\ex{238}U ratio of 0.32.
+    \item In this scenario, we know assume that we know the original ratio of $N_{0,235}/N_{0,238} = 1$. We can therefore solve equation~\ref{ratio_u} for $t$ and plug in all known values. This results in
+    \begin{align}
+        t &= \frac{\ln\left(\frac{r_{238}}{r_{235}}\right)}
+            {\frac{\ln(2)}{T_{1/2,235}} - \frac{\ln(2)}{T_{1/2,238}}} \\
+        t &= 5.9\,Ga.
+    \end{align}
+    This means that the \textit{r}-process that made the uranium in the Solar System formed them 5.9\,Ga ago, or around 1.4\,Ga prior to Solar System formation. 
+    \item Typical reactor grade uranium is enriched in \ex{235}U at a level of 3-5\%. In the early Solar System, \ex{235}U was enriched to 32\%, it is thus more than feasible to have a early nuclear reactor. In fact, the early Solar System contained what we now refer to as highly enriched uranium (HEU), for which the enrichment is in between 20\% and 85\%. For weapons-grade uranium, the enrichment must exceed 85\%, which is not the case in for the early Solar System. 
+
+    Interstingly, natural fission reactors have existed on Earth, e.g., the Oklo reactor around 1.5\,Ga ago. \ex{235}U was enriched to around 2.5\% at this time, which makes fission reactors feasible. See also \href{https://ans.org/pi/np/oklo/}{here}.
+\end{itemize}
+
+\end{problem}
+
+\begin{problem}{Primary vs. Secondary Processes}
+
+A primary nucleosynthesis process can take place and form new nuclei by simply starting from hydrogen and helium, i.e., no additional seeds are required. The \textit{r}-process is an excellent example of a primary process. 
+
+A secondary process on the other hand requires seeds to be present in order to form. The \textit{s}-process is an excellent example of a secondary process. It requires \ex{56}Fe to be present as a seed.
+
+Both types of processes likely play a role in forming the \textit{p}-nuclei. While the \textit{rp}- the $\nu p$-processes are primary, the $\gamma$-process requires seeds and is thus a secondary process.
+\end{problem}
+
+
+\begin{problem}{\textit{s}-, \textit{r}-, and \textit{p}- nuclei (20\%)}
+Some \textit{r}-only nuclei are:
+\begin{itemize}
+    \item \ex{70}Zn, neutron-rich, shielded from \textit{s}-process by branching point at \ex{69}Zn with a half-life of 56.4\,min
+    \item \ex{76}Ge, neutron-rich, shielded from \textit{s}-process by branching point at \ex{75}Ge with a half-life of 82.78\,min
+    \item \ex{82}Se, neutron-rich, shielded from \textit{s}-process by branching point at \ex{81}Se with a half-life of 18.45\,min
+    \item \ex{110}Pd, neutron-rich, shielded from \textit{s}-process by branching point at \ex{109}Pd with a half-life of 13.59\,h
+    \item \ex{136}Xe, neutron-rich, shielded from \textit{s}-process by branching point at \ex{135}Xe with a half-life of 9.14\,h
+\end{itemize}
+
+Some \textit{s}-only nuclei are:
+\begin{itemize}
+    \item \ex{96}Mo, on \textit{s}-process path and shielded from \textit{r}-process by stable isobar \ex{96}Zr
+    \item \ex{100}Ru, on \textit{s}-process path and shielded from \textit{r}-process by stable isobar \ex{100}Mo
+    \item \ex{110}Cd, on \textit{s}-process path and shielded from \textit{r}-process by stable isobar \ex{110}Pd
+    \item \ex{116}Sn, on \textit{s}-process path and shielded from \textit{r}-process by stable isobar \ex{116}Cd
+    \item \ex{130}Xe, on \textit{s}-process path and shielded from \textit{r}-process by stable isobar \ex{130}Te
+\end{itemize}
+
+Some \textit{p}-only nuclei are:
+\begin{itemize}
+    \item \ex{92}Mo, not on \textit{s}-process path and shielded from \textit{r}-process path
+    \item \ex{96}Ru, not on \textit{s}-process path and shielded from \textit{r}-process path
+    \item \ex{102}Pd, not on \textit{s}-process path and shielded from \textit{r}-process path
+    \item \ex{106}Cd, not on \textit{s}-process path and shielded from \textit{r}-process path
+    \item \ex{130}Ba, not on \textit{s}-process path and shielded from \textit{r}-process path
+\end{itemize}
+\end{problem}
+
+
+\begin{problem}{it (20\%)}
+
+We can calculate the neutron density in the \textit{r}-process as 
+\begin{equation}
+    \rho_{nr} = \rho_n \times m_n = 0.0167 \,\mathrm{g}\,\mathrm{cm}^{-2}.
+\end{equation}
+Water on the other hand has a density of $\rho_\mathrm{H2O} = 1$\,g\,cm$^{-2}$ and consists of two hydrogen and one oxygen atom. Assuming that all oxygen is \ex{16}O and all hydrogen in the form of \ex{1}H, a water molecule consists of 10 protons and 8 neutrons. The neutron density of water is thus around
+\begin{equation}
+    \rho_{n,\mathrm{H2O}} = \frac{8}{18} \times \rho_\mathrm{H2O} = 0.44  \,\mathrm{g}\,\mathrm{cm}^{-2}.
+\end{equation}
+This density is 26 times higher than the density in the \textit{r}-process.
+
+The \textit{r}-process however does not take place in the ocean for two main reasons: First, it requires a temperature of around 1\,GK to take place. Second, neutrons in the \textit{r}-process are free while neutrons in water are bound to their respective nuclei. The neutrons in water thus have already been caught and are not available for further neutron captures.
+\end{problem}
+
+\end{document}
